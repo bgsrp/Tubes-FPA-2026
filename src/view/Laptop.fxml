@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="controller.LaptopController">
+
+    <top>
+        <Label text="Manajemen Data Laptop"
+               style="-fx-font-size: 20px; -fx-font-weight: bold; -fx-padding: 15;" />
+    </top>
+
+    <center>
+        <VBox spacing="15">
+            <padding>
+                <Insets top="20" right="20" bottom="20" left="20" />
+            </padding>
+
+            <!-- Form Input Laptop -->
+            <VBox spacing="10">
+                <Label text="Form Data Laptop"
+                       style="-fx-font-size: 16px; -fx-font-weight: bold;" />
+
+                <TextField fx:id="txtId" promptText="ID Laptop" />
+                <TextField fx:id="txtCustomerId" promptText="ID Customer" />
+                <TextField fx:id="txtMerk" promptText="Merk Laptop" />
+                <TextField fx:id="txtTipe" promptText="Tipe Laptop" />
+                <TextField fx:id="txtSerialNumber" promptText="Serial Number" />
+                <TextArea fx:id="txtKeluhan"
+                          promptText="Keluhan Laptop"
+                          prefRowCount="3"
+                          wrapText="true" />
+
+                <HBox spacing="10">
+                    <Button text="Tambah" onAction="#handleAddLaptop" />
+                    <Button text="Update" onAction="#handleUpdateLaptop" />
+                    <Button text="Hapus" onAction="#handleDeleteLaptop" />
+                    <Button text="Clear" onAction="#handleClearForm" />
+                </HBox>
+            </VBox>
+
+            <!-- Table Data Laptop -->
+            <VBox spacing="10">
+                <Label text="Daftar Laptop"
+                       style="-fx-font-size: 16px; -fx-font-weight: bold;" />
+
+                <TableView fx:id="laptopTable" prefHeight="350">
+                    <columns>
+                        <TableColumn fx:id="colId" text="ID" prefWidth="80" />
+                        <TableColumn fx:id="colCustomerId" text="Customer ID" prefWidth="100" />
+                        <TableColumn fx:id="colMerk" text="Merk" prefWidth="120" />
+                        <TableColumn fx:id="colTipe" text="Tipe" prefWidth="120" />
+                        <TableColumn fx:id="colSerialNumber" text="Serial Number" prefWidth="150" />
+                        <TableColumn fx:id="colKeluhan" text="Keluhan" prefWidth="250" />
+                    </columns>
+                </TableView>
+            </VBox>
+
+        </VBox>
+    </center>
+
+</BorderPane>

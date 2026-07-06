@@ -1,0 +1,434 @@
+/* =====================================================
+   GLOBAL
+===================================================== */
+
+.root {
+    -fx-font-family: "Segoe UI";
+    -fx-background-color: #F5F7FA;
+}
+
+/* =====================================================
+   SIDEBAR
+===================================================== */
+
+.sidebar {
+    -fx-background-color: #1E293B;
+    -fx-padding: 20;
+}
+
+.logo-title {
+    -fx-text-fill: white;
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+}
+
+.logo-subtitle {
+    -fx-text-fill: #CBD5E1;
+    -fx-font-size: 12px;
+}
+
+/* =====================================================
+   MENU BUTTON
+===================================================== */
+
+.menu-button {
+
+    -fx-background-color: transparent;
+
+    -fx-text-fill: white;
+
+    -fx-font-size: 14px;
+
+    -fx-font-weight: bold;
+
+    -fx-padding: 12 18;
+
+    -fx-background-radius: 8;
+
+    -fx-cursor: hand;
+
+}
+
+.menu-button:hover {
+
+    -fx-background-color: #334155;
+
+}
+
+.menu-button:pressed {
+
+    -fx-background-color: #475569;
+
+}
+
+/* =====================================================
+   LOGOUT BUTTON
+===================================================== */
+
+.logout-button {
+
+    -fx-background-color: #EF4444;
+
+    -fx-text-fill: white;
+
+    -fx-font-weight: bold;
+
+    -fx-padding: 12 18;
+
+    -fx-background-radius: 8;
+
+    -fx-cursor: hand;
+
+}
+
+.logout-button:hover {
+
+    -fx-background-color: #DC2626;
+
+}
+/* =====================================================
+   HEADER
+===================================================== */
+
+.header {
+
+    -fx-background-color: white;
+
+    -fx-border-color: #E2E8F0;
+
+    -fx-border-width: 0 0 1 0;
+
+    -fx-alignment: CENTER_LEFT;
+
+}
+
+.header-title {
+
+    -fx-font-size: 24px;
+
+    -fx-font-weight: bold;
+
+    -fx-text-fill: #1E293B;
+
+}
+
+.text-field {
+
+    -fx-background-color: #F8FAFC;
+
+    -fx-background-radius: 8;
+
+    -fx-border-radius: 8;
+
+    -fx-border-color: #CBD5E1;
+
+    -fx-padding: 8 12;
+
+}
+
+/* =====================================================
+   CONTENT
+===================================================== */
+
+.content {
+
+    -fx-background-color: #F5F7FA;
+
+}
+
+/* =====================================================
+   CARD
+===================================================== */
+
+.card {
+
+    -fx-background-color: white;
+
+    -fx-background-radius: 12;
+
+    -fx-border-color: #E2E8F0;
+
+    -fx-border-radius: 12;
+
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.08), 8, 0.2, 0, 2);
+
+}
+
+.card-title {
+
+    -fx-font-size: 12px;
+
+    -fx-font-weight: bold;
+
+    -fx-text-fill: #64748B;
+
+}
+
+.card-value {
+
+    -fx-font-size: 28px;
+
+    -fx-font-weight: bold;
+
+    -fx-text-fill: #0F172A;
+
+}
+
+/* =====================================================
+   SECTION TITLE
+===================================================== */
+
+.section-title {
+
+    -fx-font-size: 18px;
+
+    -fx-font-weight: bold;
+
+    -fx-text-fill: #1E293B;
+
+}
+
+/* =====================================================
+   CHART CONTAINER
+===================================================== */
+
+.chart-container {
+
+    -fx-background-color: white;
+
+    -fx-background-radius: 12;
+
+    -fx-border-color: #E2E8F0;
+
+    -fx-border-radius: 12;
+
+    -fx-padding: 15;
+
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.08), 8, 0.2, 0, 2);
+
+}
+/* =====================================================
+   TABLE VIEW
+===================================================== */
+
+.table-view {
+
+    -fx-background-color: white;
+
+    -fx-background-radius: 12;
+
+    -fx-border-color: #E2E8F0;
+
+    -fx-border-radius: 12;
+
+    -fx-padding: 5;
+
+}
+
+.table-view .column-header-background {
+
+    -fx-background-color: #1E293B;
+
+    -fx-background-radius: 12 12 0 0;
+
+}
+
+.table-view .column-header {
+
+    -fx-background-color: transparent;
+
+}
+
+.table-view .column-header .label {
+
+    -fx-text-fill: white;
+
+    -fx-font-weight: bold;
+
+    -fx-font-size: 13px;
+
+}
+
+.table-row-cell {
+
+    -fx-background-color: white;
+
+    -fx-border-color: transparent;
+
+    -fx-cell-size: 40px;
+
+}
+
+.table-row-cell:hover {
+
+    -fx-background-color: #F1F5F9;
+
+}
+
+.table-row-cell:selected {
+
+    -fx-background-color: #DBEAFE;
+
+}
+
+.table-cell {
+
+    -fx-alignment: CENTER_LEFT;
+
+    -fx-padding: 8 10;
+
+}
+
+/* =====================================================
+   CHART
+===================================================== */
+
+.chart {
+
+    -fx-background-color: transparent;
+
+}
+
+.chart-title {
+
+    -fx-font-size: 16px;
+
+    -fx-font-weight: bold;
+
+    -fx-text-fill: #1E293B;
+
+}
+
+.chart-legend {
+
+    -fx-background-color: transparent;
+
+}
+
+.chart-plot-background {
+
+    -fx-background-color: white;
+
+}
+
+.axis {
+
+    -fx-tick-label-fill: #475569;
+
+    -fx-font-size: 12px;
+
+}
+
+.axis-label {
+
+    -fx-text-fill: #334155;
+
+    -fx-font-weight: bold;
+
+}
+
+/* =====================================================
+   PIE CHART
+===================================================== */
+
+.chart-pie-label {
+
+    -fx-font-size: 12px;
+
+    -fx-font-weight: bold;
+
+}
+
+.default-color0.chart-pie {
+
+    -fx-pie-color: #22C55E;
+
+}
+
+.default-color1.chart-pie {
+
+    -fx-pie-color: #F59E0B;
+
+}
+
+.default-color2.chart-pie {
+
+    -fx-pie-color: #EF4444;
+
+}
+
+/* =====================================================
+   BAR CHART
+===================================================== */
+
+.default-color0.chart-bar {
+
+    -fx-bar-fill: #3B82F6;
+
+}
+
+/* =====================================================
+   SCROLL BAR
+===================================================== */
+
+.scroll-bar {
+
+    -fx-background-color: transparent;
+
+}
+
+.scroll-bar .thumb {
+
+    -fx-background-color: #CBD5E1;
+
+    -fx-background-radius: 8;
+
+}
+
+.scroll-bar .thumb:hover {
+
+    -fx-background-color: #94A3B8;
+
+}
+
+.scroll-bar .increment-button,
+.scroll-bar .decrement-button {
+
+    -fx-background-color: transparent;
+
+}
+
+.scroll-bar .increment-arrow,
+.scroll-bar .decrement-arrow {
+
+    -fx-background-color: transparent;
+
+}
+
+/* =====================================================
+   BUTTON FOCUS
+===================================================== */
+
+.button:focused {
+
+    -fx-focus-color: transparent;
+
+    -fx-faint-focus-color: transparent;
+
+}
+
+/* =====================================================
+   TEXT FIELD FOCUS
+===================================================== */
+
+.text-field:focused {
+
+    -fx-border-color: #3B82F6;
+
+    -fx-border-width: 2;
+
+}
+
+/* =====================================================
+   END OF FILE
+===================================================== */
