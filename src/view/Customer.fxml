@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane prefHeight="700.0" prefWidth="1000.0"
+            xmlns="http://javafx.com/javafx/9.0.4"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="controller.CustomerController">
+
+    <children>
+
+        <VBox spacing="15"
+              AnchorPane.topAnchor="20"
+              AnchorPane.leftAnchor="20"
+              AnchorPane.rightAnchor="20"
+              AnchorPane.bottomAnchor="20">
+
+            <children>
+
+                <Label text="DATA CUSTOMER"
+                       style="-fx-font-size:24px; -fx-font-weight:bold;" />
+
+                <!-- Form Input -->
+
+                <VBox spacing="10">
+
+                    <children>
+
+                        <TextField fx:id="txtId"
+                                   promptText="ID Customer"/>
+
+                        <TextField fx:id="txtNama"
+                                   promptText="Nama Customer"/>
+
+                        <TextField fx:id="txtNoHP"
+                                   promptText="Nomor HP"/>
+
+                        <TextField fx:id="txtAlamat"
+                                   promptText="Alamat"/>
+
+                    </children>
+
+                </VBox>
+
+                <!-- Tombol -->
+
+                <HBox spacing="10">
+
+                    <children>
+
+                        <Button text="Tambah"
+                                fx:id="btnTambah"
+                                onAction="#handleTambah"/>
+
+                        <Button text="Ubah"
+                                fx:id="btnUbah"
+                                onAction="#handleUbah"/>
+
+                        <Button text="Hapus"
+                                fx:id="btnHapus"
+                                onAction="#handleHapus"/>
+
+                        <Button text="Clear"
+                                fx:id="btnClear"
+                                onAction="#handleClear"/>
+
+                    </children>
+
+                </HBox>
+
+                <!-- Table -->
+
+                <TableView fx:id="tableCustomer"
+                           prefHeight="420">
+
+                    <columns>
+
+                        <TableColumn fx:id="colId"
+                                     text="ID"
+                                     prefWidth="120"/>
+
+                        <TableColumn fx:id="colNama"
+                                     text="Nama"
+                                     prefWidth="220"/>
+
+                        <TableColumn fx:id="colNoHP"
+                                     text="No HP"
+                                     prefWidth="180"/>
+
+                        <TableColumn fx:id="colAlamat"
+                                     text="Alamat"
+                                     prefWidth="420"/>
+
+                    </columns>
+
+                </TableView>
+
+            </children>
+
+            <padding>
+                <Insets top="15" right="15" bottom="15" left="15"/>
+            </padding>
+
+        </VBox>
+
+    </children>
+
+</AnchorPane>
