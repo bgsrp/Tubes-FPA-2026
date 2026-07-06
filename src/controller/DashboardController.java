@@ -17,9 +17,9 @@ import javafx.scene.control.TextField;
 
 import model.Service;
 
-import service.CustomerService;
-import service.LaptopService;
-import service.ServiceService;
+import Service.CustomerService;
+import Service.LaptopService;
+import Service.ServiceService;
 
 public class DashboardController implements Initializable {
 

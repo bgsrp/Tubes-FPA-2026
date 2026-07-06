@@ -1,7 +1,7 @@
-package service;
+package Service;
 
 import model.Service;
-import repository.ServiceRepository;
+import Repository.ServiceRepository;
 
 import java.util.List;
 
@@ -65,6 +65,50 @@ public class ServiceService {
      */
     public Service findById(String id) {
         return repository.findById(id);
+    }
+
+    public double getTotalRevenue() {
+        return repository.getAllServices().stream()
+                .mapToDouble(Service::getBiaya)
+                .sum();
+    }
+
+    public int getMonthlyService(String month) {
+        if (month == null || month.trim().isEmpty()) {
+            return 0;
+        }
+        String monthLower = month.toLowerCase();
+        return (int) repository.getAllServices().stream()
+                .filter(service -> {
+                    String tanggal = service.getTanggalMasuk();
+                    return tanggal != null && tanggal.toLowerCase().contains(monthLower);
+                })
+                .count();
+    }
+
+    public int getCompletedService() {
+        return (int) repository.getAllServices().stream()
+                .filter(service -> service.getStatus() != null
+                        && service.getStatus().equalsIgnoreCase("completed"))
+                .count();
+    }
+
+    public int getProgressService() {
+        return (int) repository.getAllServices().stream()
+                .filter(service -> service.getStatus() != null
+                        && service.getStatus().toLowerCase().contains("progress"))
+                .count();
+    }
+
+    public int getWaitingService() {
+        return (int) repository.getAllServices().stream()
+                .filter(service -> service.getStatus() != null
+                        && service.getStatus().equalsIgnoreCase("waiting"))
+                .count();
+    }
+
+    public List<Service> getRecentServices() {
+        return repository.getAllServices();
     }
 
     /**

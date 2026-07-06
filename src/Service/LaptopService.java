@@ -1,7 +1,7 @@
 package Service;
 
 import model.Laptop;
-import repository.LaptopRepository;
+import Repository.LaptopRepository;
 
 import java.util.List;
 
@@ -89,4 +89,3 @@ public class LaptopService {
         return value != null && !value.trim().isEmpty();
     }
 }
-```

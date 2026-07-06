@@ -5,7 +5,7 @@ import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import model.Laptop;
-import service.LaptopService;
+import Service.LaptopService;
 
 public class LaptopController {
 
@@ -198,4 +198,4 @@ public class LaptopController {
         alert.showAndWait();
     }
 }
-```
+

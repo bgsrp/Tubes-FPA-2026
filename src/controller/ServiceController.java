@@ -10,7 +10,7 @@ import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
 
 import model.Service;
-import service.ServiceService;
+import Service.ServiceService;
 import util.QueueManager;
 import util.StackManager;
 

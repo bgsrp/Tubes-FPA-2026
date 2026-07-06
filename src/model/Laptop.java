@@ -77,7 +77,6 @@ public class Laptop {
                 ", tipe='" + tipe + '\'' +
                 ", serialNumber='" + serialNumber + '\'' +
                 ", keluhan='" + keluhan + '\'' +
-                '}';
+                "}";
     }
 }
-```
