@@ -1,6 +1,7 @@
 package Repository;
 
 import model.Laptop;
+import util.XMLHelper;
 import org.w3c.dom.*;
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
@@ -18,10 +19,10 @@ public class LaptopRepository {
 
     public List<Laptop> getAllLaptops() {
         List<Laptop> laptops = new ArrayList<>();
-        File file = new File(FILE_PATH);
+        File file = XMLHelper.resolveFile(FILE_PATH);
 
         try {
-            if (!file.exists()) {
+            if (!file.exists() || file.length() == 0) {
                 createEmptyXmlFile();
                 return laptops;
             }
@@ -56,8 +57,8 @@ public class LaptopRepository {
 
     public void addLaptop(Laptop laptop) {
         try {
-            File file = new File(FILE_PATH);
-            if (!file.exists()) {
+            File file = XMLHelper.resolveFile(FILE_PATH);
+            if (!file.exists() || file.length() == 0) {
                 createEmptyXmlFile();
             }
 
@@ -82,8 +83,8 @@ public class LaptopRepository {
 
     public void updateLaptop(Laptop updatedLaptop) {
         try {
-            File file = new File(FILE_PATH);
-            if (!file.exists()) {
+            File file = XMLHelper.resolveFile(FILE_PATH);
+            if (!file.exists() || file.length() == 0) {
                 createEmptyXmlFile();
             }
 
@@ -116,8 +117,8 @@ public class LaptopRepository {
 
     public void deleteLaptop(String id) {
         try {
-            File file = new File(FILE_PATH);
-            if (!file.exists()) {
+            File file = XMLHelper.resolveFile(FILE_PATH);
+            if (!file.exists() || file.length() == 0) {
                 createEmptyXmlFile();
                 return;
             }
@@ -158,7 +159,7 @@ public class LaptopRepository {
     }
 
     private Document loadDocument() throws Exception {
-        File file = new File(FILE_PATH);
+        File file = XMLHelper.resolveFile(FILE_PATH);
 
         DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
         DocumentBuilder builder = factory.newDocumentBuilder();
@@ -176,13 +177,13 @@ public class LaptopRepository {
         transformer.setOutputProperty("{http://xml.apache.org/xslt}indent-amount", "4");
 
         DOMSource source = new DOMSource(document);
-        StreamResult result = new StreamResult(new File(FILE_PATH));
+        StreamResult result = new StreamResult(XMLHelper.resolveFile(FILE_PATH));
         transformer.transform(source, result);
     }
 
     private void createEmptyXmlFile() {
         try {
-            File directory = new File("xml");
+            File directory = XMLHelper.resolveFile("xml");
             if (!directory.exists()) {
                 directory.mkdirs();
             }

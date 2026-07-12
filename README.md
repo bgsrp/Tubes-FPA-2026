@@ -1,18 +1,31 @@
-## Getting Started
+# LaptopCare
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+LaptopCare adalah aplikasi desktop JavaFX untuk manajemen servis laptop UMKM.
+Project mengikuti pola MVC dengan alur:
 
-## Folder Structure
+`FXML -> Controller -> Service -> Repository -> XML`
 
-The workspace contains two folders by default, where:
+## Modul Utama
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+- Customer: CRUD pelanggan dan TableView.
+- Laptop: CRUD laptop, relasi ke customer, dan TableView.
+- Service: CRUD servis, Queue antrean servis, Stack riwayat status, dan TableView.
+- Dashboard: ringkasan data, Bar Chart servis bulanan, Pie Chart status servis, dan tabel recent service.
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
+## Struktur Data XML
 
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
+Data aplikasi disimpan di folder `xml` pada root project:
 
-## Dependency Management
+- `xml/customer.xml`
+- `xml/laptop.xml`
+- `xml/service.xml`
 
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+Jalankan aplikasi dari root project `LaptopCare` agar repository membaca folder XML yang benar.
+
+## Cara Menjalankan
+
+1. Buka folder project ini di VS Code.
+2. Pastikan JavaFX tersedia. Project ini dibuat untuk Java/JavaFX 9 sesuai FXML bawaan.
+3. Jalankan class `application.Main`.
+
+Jika menjalankan lewat terminal, gunakan working directory root project ini.

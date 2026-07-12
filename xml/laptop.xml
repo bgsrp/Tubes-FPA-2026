@@ -1,2 +1,2429 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<laptops/>
+<laptops>
+
+
+    <laptop>
+
+
+        <id>1</id>
+
+
+        <customerId>20</customerId>
+
+
+        <merk>Dell</merk>
+
+
+        <tipe>Inspiron 14</tipe>
+
+
+        <serialNumber>SN87CSLTBH1</serialNumber>
+
+
+        <keluhan>Kamera laptop tidak berfungsi</keluhan>
+
+
+    </laptop>
+
+
+    <laptop>
+
+
+        <id>2</id>
+
+
+        <customerId>12</customerId>
+
+
+        <merk>Lenovo</merk>
+
+
+        <tipe>V14</tipe>
+
+
+        <serialNumber>SNNRYDQPUX2</serialNumber>
+
+
+        <keluhan>Engsel layar patah</keluhan>
+
+
+    </laptop>
+
+
+    <laptop>
+
+
+        <id>3</id>
+
+
+        <customerId>19</customerId>
+
+
+        <merk>Samsung</merk>
+
+
+        <tipe>Notebook Odyssey</tipe>
+
+
+        <serialNumber>SNWZCL289N3</serialNumber>
+
+
+        <keluhan>Wifi tidak terdeteksi</keluhan>
+
+
+    </laptop>
+
+
+    <laptop>
+
+
+        <id>4</id>
+
+
+        <customerId>38</customerId>
+
+
+        <merk>Dell</merk>
+
+
+        <tipe>G15</tipe>
+
+
+        <serialNumber>SN6SM8WE464</serialNumber>
+
+
+        <keluhan>Charger tidak mengisi daya</keluhan>
+
+
+    </laptop>
+
+
+    <laptop>
+
+
+        <id>5</id>
+
+
+        <customerId>91</customerId>
+
+
+        <merk>HP</merk>
+
+
+        <tipe>EliteBook 840</tipe>
+
+
+        <serialNumber>SNLYD6ZWPC5</serialNumber>
+
+
+        <keluhan>Kipas berisik</keluhan>
+
+
+    </laptop>
+
+
+    <laptop>
+
+
+        <id>6</id>
+
+
+        <customerId>45</customerId>
+
+
+        <merk>Apple</merk>
+
+
+        <tipe>MacBook Pro 13</tipe>
+
+
+        <serialNumber>SN55SJU52D6</serialNumber>
+
+
+        <keluhan>Keyboard tidak berfungsi sebagian</keluhan>
+
+
+    </laptop>
+
+
+    <laptop>
+
+
+        <id>7</id>
+
+
+        <customerId>44</customerId>
+
+
+        <merk>HP</merk>
+
+
+        <tipe>240 G8</tipe>
+
+
+        <serialNumber>SNSZ87SUNX7</serialNumber>
+
+
+        <keluhan>Engsel layar patah</keluhan>
+
+
+    </laptop>
+
+
+    <laptop>
+
+
+        <id>8</id>
+
+
+        <customerId>57</customerId>
+
+
+        <merk>Asus</merk>
+
+
+        <tipe>ROG Strix G15</tipe>
+
+
+        <serialNumber>SNKWRRJ2TR8</serialNumber>
+
+
+        <keluhan>Charger tidak mengisi daya</keluhan>
+
+
+    </laptop>
+
+
+    <laptop>
+
+
+        <id>9</id>
+
+
+        <customerId>13</customerId>
+
+
+        <merk>Apple</merk>
+
+
+        <tipe>MacBook Pro 16</tipe>
+
+
+        <serialNumber>SN7BDYLQYT9</serialNumber>
+
+
+        <keluhan>Touchpad tidak responsif</keluhan>
+
+
+    </laptop>
+
+
+    <laptop>
+
+
+        <id>10</id>
+
+
+        <customerId>15</customerId>
+
+
+        <merk>Lenovo</merk>
+
+
+        <tipe>V14</tipe>
+
+
+        <serialNumber>SNYY2XXV5R10</serialNumber>
+
+
+        <keluhan>Layar bergaris</keluhan>
+
+
+    </laptop>
+
+
+    <laptop>
+
+
+        <id>11</id>
+
+
+        <customerId>71</customerId>
+
+
+        <merk>Axioo</merk>
+
+
+        <tipe>MyBook 14</tipe>
+
+
+        <serialNumber>SN99JBPC7G11</serialNumber>
+
+
+        <keluhan>Charger tidak mengisi daya</keluhan>
+
+
+    </laptop>
+
+
+    <laptop>
+
+
+        <id>12</id>
+
+
+        <customerId>26</customerId>
+
+
+        <merk>HP</merk>
+
+
+        <tipe>Omen 15</tipe>
+
+
+        <serialNumber>SN8DKX8VCE12</serialNumber>
+
+
+        <keluhan>Kipas berisik</keluhan>
+
+
+    </laptop>
+
+
+    <laptop>
+
+
+        <id>13</id>
+
+
+        <customerId>82</customerId>
+
+
+        <merk>Acer</merk>
+
+
+        <tipe>Nitro 5</tipe>
+
+
+        <serialNumber>SN526MEAFU13</serialNumber>
+
+
+        <keluhan>Laptop panas berlebihan lalu mati sendiri</keluhan>
+
+
+    </laptop>
+
+
+    <laptop>
+
+
+        <id>14</id>
+
+
+        <customerId>68</customerId>
+
+
+        <merk>HP</merk>
+
+
+        <tipe>Pavilion 14</tipe>
+
+
+        <serialNumber>SNBYXGRQXB14</serialNumber>
+
+
+        <keluhan>Terkena virus/malware</keluhan>
+
+
+    </laptop>
+
+
+    <laptop>
+
+
+        <id>15</id>
+
+
+        <customerId>32</customerId>
+
+
+        <merk>Apple</merk>
+
+
+        <tipe>MacBook Pro 16</tipe>
+
+
+        <serialNumber>SN9LGB48NL15</serialNumber>
+
+
+        <keluhan>Laptop tidak bisa menyala</keluhan>
+
+
+    </laptop>
+
+
+    <laptop>
+
+
+        <id>16</id>
+
+
+        <customerId>13</customerId>
+
+
+        <merk>Asus</merk>
+
+
+        <tipe>TUF Gaming A15</tipe>
+
+
+        <serialNumber>SNUF64VMWF16</serialNumber>
+
+
+        <keluhan>RAM perlu diupgrade</keluhan>
+
+
+    </laptop>
+
+
+    <laptop>
+
+
+        <id>17</id>
+
+
+        <customerId>89</customerId>
+
+
+        <merk>Lenovo</merk>
+
+
+        <tipe>Legion 5</tipe>
+
+
+        <serialNumber>SNYEHRUARY17</serialNumber>
+
+
+        <keluhan>Terkena air/tumpahan cairan</keluhan>
+
+
+    </laptop>
+
+
+    <laptop>
+
+
+        <id>18</id>
+
+
+        <customerId>8</customerId>
+
+
+        <merk>Axioo</merk>
+
+
+        <tipe>Pongo 14</tipe>
+
+
+        <serialNumber>SNNQBEYZMU18</serialNumber>
+
+
+        <keluhan>Laptop panas berlebihan lalu mati sendiri</keluhan>
+
+
+    </laptop>
+
+
+    <laptop>
+
+
+        <id>19</id>
+
+
+        <customerId>68</customerId>
+
+
+        <merk>Axioo</merk>
+
+
+        <tipe>Pongo 14</tipe>
+
+
+        <serialNumber>SNY3A6Y52519</serialNumber>
+
+
+        <keluhan>RAM perlu diupgrade</keluhan>
+
+
+    </laptop>
+
+
+    <laptop>
+
+
+        <id>20</id>
+
+
+        <customerId>16</customerId>
+
+
+        <merk>Apple</merk>
+
+
+        <tipe>MacBook Air M1</tipe>
+
+
+        <serialNumber>SNESRF2FNY20</serialNumber>
+
+
+        <keluhan>Kipas berisik</keluhan>
+
+
+    </laptop>
+
+
+    <laptop>
+
+
+        <id>21</id>
+
+
+        <customerId>51</customerId>
+
+
+        <merk>Acer</merk>
+
+
+        <tipe>Aspire 5</tipe>
+
+
+        <serialNumber>SNN8J4EAVU21</serialNumber>
+
+
+        <keluhan>Hardisk bad sector</keluhan>
+
+
+    </laptop>
+
+
+    <laptop>
+
+
+        <id>22</id>
+
+
+        <customerId>49</customerId>
+
+
+        <merk>MSI</merk>
+
+
+        <tipe>Katana GF66</tipe>
+
+
+        <serialNumber>SNZN2JH43422</serialNumber>
+
+
+        <keluhan>Baterai cepat habis</keluhan>
+
+
+    </laptop>
+
+
+    <laptop>
+
+
+        <id>23</id>
+
+
+        <customerId>90</customerId>
+
+
+        <merk>Apple</merk>
+
+
+        <tipe>MacBook Pro 13</tipe>
+
+
+        <serialNumber>SN265ZJGRB23</serialNumber>
+
+
+        <keluhan>Laptop panas berlebihan lalu mati sendiri</keluhan>
+
+
+    </laptop>
+
+
+    <laptop>
+
+
+        <id>24</id>
+
+
+        <customerId>11</customerId>
+
+
+        <merk>HP</merk>
+
+
+        <tipe>Pavilion 14</tipe>
+
+
+        <serialNumber>SNWPQX3GDM24</serialNumber>
+
+
+        <keluhan>Tidak bisa masuk Windows</keluhan>
+
+
+    </laptop>
+
+
+    <laptop>
+
+
+        <id>25</id>
+
+
+        <customerId>95</customerId>
+
+
+        <merk>Lenovo</merk>
+
+
+        <tipe>IdeaPad Slim 3</tipe>
+
+
+        <serialNumber>SNLC4GMM9325</serialNumber>
+
+
+        <keluhan>Layar bergaris</keluhan>
+
+
+    </laptop>
+
+
+    <laptop>
+
+
+        <id>26</id>
+
+
+        <customerId>92</customerId>
+
+
+        <merk>Dell</merk>
+
+
+        <tipe>Vostro 3400</tipe>
+
+
+        <serialNumber>SNJET5BMV726</serialNumber>
+
+
+        <keluhan>Wifi tidak terdeteksi</keluhan>
+
+
+    </laptop>
+
+
+    <laptop>
+
+
+        <id>27</id>
+
+
+        <customerId>37</customerId>
+
+
+        <merk>HP</merk>
+
+
+        <tipe>Victus 16</tipe>
+
+
+        <serialNumber>SNXAT6J56K27</serialNumber>
+
+
+        <keluhan>Kipas berisik</keluhan>
+
+
+    </laptop>
+
+
+    <laptop>
+
+
+        <id>28</id>
+
+
+        <customerId>68</customerId>
+
+
+        <merk>HP</merk>
+
+
+        <tipe>240 G8</tipe>
+
+
+        <serialNumber>SNVNDJYAM328</serialNumber>
+
+
+        <keluhan>Keyboard tidak berfungsi sebagian</keluhan>
+
+
+    </laptop>
+
+
+    <laptop>
+
+
+        <id>29</id>
+
+
+        <customerId>97</customerId>
+
+
+        <merk>Apple</merk>
+
+
+        <tipe>MacBook Air M1</tipe>
+
+
+        <serialNumber>SNCTYGVD8D29</serialNumber>
+
+
+        <keluhan>Hardisk bad sector</keluhan>
+
+
+    </laptop>
+
+
+    <laptop>
+
+
+        <id>30</id>
+
+
+        <customerId>26</customerId>
+
+
+        <merk>Axioo</merk>
+
+
+        <tipe>Pongo 14</tipe>
+
+
+        <serialNumber>SNJSM7S5B330</serialNumber>
+
+
+        <keluhan>Engsel layar patah</keluhan>
+
+
+    </laptop>
+
+
+    <laptop>
+
+
+        <id>31</id>
+
+
+        <customerId>78</customerId>
+
+
+        <merk>HP</merk>
+
+
+        <tipe>EliteBook 840</tipe>
+
+
+        <serialNumber>SNJ295WPNR31</serialNumber>
+
+
+        <keluhan>Engsel layar patah</keluhan>
+
+
+    </laptop>
+
+
+    <laptop>
+
+
+        <id>32</id>
+
+
+        <customerId>49</customerId>
+
+
+        <merk>HP</merk>
+
+
+        <tipe>Victus 16</tipe>
+
+
+        <serialNumber>SNDB6ERWC632</serialNumber>
+
+
+        <keluhan>Terkena virus/malware</keluhan>
+
+
+    </laptop>
+
+
+    <laptop>
+
+
+        <id>33</id>
+
+
+        <customerId>39</customerId>
+
+
+        <merk>Dell</merk>
+
+
+        <tipe>Latitude 5420</tipe>
+
+
+        <serialNumber>SNSU3UM74Y33</serialNumber>
+
+
+        <keluhan>Laptop tidak bisa menyala</keluhan>
+
+
+    </laptop>
+
+
+    <laptop>
+
+
+        <id>34</id>
+
+
+        <customerId>63</customerId>
+
+
+        <merk>Acer</merk>
+
+
+        <tipe>Predator Helios</tipe>
+
+
+        <serialNumber>SN8NAD5SVP34</serialNumber>
+
+
+        <keluhan>Laptop panas berlebihan lalu mati sendiri</keluhan>
+
+
+    </laptop>
+
+
+    <laptop>
+
+
+        <id>35</id>
+
+
+        <customerId>20</customerId>
+
+
+        <merk>Dell</merk>
+
+
+        <tipe>Vostro 3400</tipe>
+
+
+        <serialNumber>SN9AJC924N35</serialNumber>
+
+
+        <keluhan>Charger tidak mengisi daya</keluhan>
+
+
+    </laptop>
+
+
+    <laptop>
+
+
+        <id>36</id>
+
+
+        <customerId>91</customerId>
+
+
+        <merk>Toshiba</merk>
+
+
+        <tipe>Satellite L series</tipe>
+
+
+        <serialNumber>SNW8M4SDBL36</serialNumber>
+
+
+        <keluhan>Charger tidak mengisi daya</keluhan>
+
+
+    </laptop>
+
+
+    <laptop>
+
+
+        <id>37</id>
+
+
+        <customerId>84</customerId>
+
+
+        <merk>Dell</merk>
+
+
+        <tipe>Vostro 3400</tipe>
+
+
+        <serialNumber>SNN6KGDQKB37</serialNumber>
+
+
+        <keluhan>Suara speaker rusak</keluhan>
+
+
+    </laptop>
+
+
+    <laptop>
+
+
+        <id>38</id>
+
+
+        <customerId>62</customerId>
+
+
+        <merk>Toshiba</merk>
+
+
+        <tipe>Dynabook Tecra</tipe>
+
+
+        <serialNumber>SNGEAY3C9W38</serialNumber>
+
+
+        <keluhan>Touchpad tidak responsif</keluhan>
+
+
+    </laptop>
+
+
+    <laptop>
+
+
+        <id>39</id>
+
+
+        <customerId>26</customerId>
+
+
+        <merk>Apple</merk>
+
+
+        <tipe>MacBook Pro 16</tipe>
+
+
+        <serialNumber>SN5RT82QZS39</serialNumber>
+
+
+        <keluhan>Kipas berisik</keluhan>
+
+
+    </laptop>
+
+
+    <laptop>
+
+
+        <id>40</id>
+
+
+        <customerId>28</customerId>
+
+
+        <merk>Samsung</merk>
+
+
+        <tipe>Galaxy Book 2</tipe>
+
+
+        <serialNumber>SNRR65BQ9D40</serialNumber>
+
+
+        <keluhan>Terkena air/tumpahan cairan</keluhan>
+
+
+    </laptop>
+
+
+    <laptop>
+
+
+        <id>41</id>
+
+
+        <customerId>2</customerId>
+
+
+        <merk>Toshiba</merk>
+
+
+        <tipe>Satellite L series</tipe>
+
+
+        <serialNumber>SNJRD6XSWY41</serialNumber>
+
+
+        <keluhan>Kipas berisik</keluhan>
+
+
+    </laptop>
+
+
+    <laptop>
+
+
+        <id>42</id>
+
+
+        <customerId>48</customerId>
+
+
+        <merk>Axioo</merk>
+
+
+        <tipe>Pongo 14</tipe>
+
+
+        <serialNumber>SN5SDC32KJ42</serialNumber>
+
+
+        <keluhan>Wifi tidak terdeteksi</keluhan>
+
+
+    </laptop>
+
+
+    <laptop>
+
+
+        <id>43</id>
+
+
+        <customerId>59</customerId>
+
+
+        <merk>Asus</merk>
+
+
+        <tipe>TUF Gaming A15</tipe>
+
+
+        <serialNumber>SNLX23AL3943</serialNumber>
+
+
+        <keluhan>Layar blank putih</keluhan>
+
+
+    </laptop>
+
+
+    <laptop>
+
+
+        <id>44</id>
+
+
+        <customerId>87</customerId>
+
+
+        <merk>Lenovo</merk>
+
+
+        <tipe>Legion 5</tipe>
+
+
+        <serialNumber>SNHWBWHTTN44</serialNumber>
+
+
+        <keluhan>Layar bergaris</keluhan>
+
+
+    </laptop>
+
+
+    <laptop>
+
+
+        <id>45</id>
+
+
+        <customerId>40</customerId>
+
+
+        <merk>Axioo</merk>
+
+
+        <tipe>Hype 5</tipe>
+
+
+        <serialNumber>SNQNKKH78845</serialNumber>
+
+
+        <keluhan>Tidak bisa masuk Windows</keluhan>
+
+
+    </laptop>
+
+
+    <laptop>
+
+
+        <id>46</id>
+
+
+        <customerId>94</customerId>
+
+
+        <merk>Axioo</merk>
+
+
+        <tipe>MyEdu 10</tipe>
+
+
+        <serialNumber>SNM77343DD46</serialNumber>
+
+
+        <keluhan>Blue screen terus menerus</keluhan>
+
+
+    </laptop>
+
+
+    <laptop>
+
+
+        <id>47</id>
+
+
+        <customerId>36</customerId>
+
+
+        <merk>Apple</merk>
+
+
+        <tipe>MacBook Pro 13</tipe>
+
+
+        <serialNumber>SN2MASNA2E47</serialNumber>
+
+
+        <keluhan>Wifi tidak terdeteksi</keluhan>
+
+
+    </laptop>
+
+
+    <laptop>
+
+
+        <id>48</id>
+
+
+        <customerId>25</customerId>
+
+
+        <merk>Apple</merk>
+
+
+        <tipe>MacBook Pro 16</tipe>
+
+
+        <serialNumber>SNGRAY2P5M48</serialNumber>
+
+
+        <keluhan>Layar blank putih</keluhan>
+
+
+    </laptop>
+
+
+    <laptop>
+
+
+        <id>49</id>
+
+
+        <customerId>32</customerId>
+
+
+        <merk>Acer</merk>
+
+
+        <tipe>Aspire 5</tipe>
+
+
+        <serialNumber>SN3DKLHGZC49</serialNumber>
+
+
+        <keluhan>Laptop tidak bisa menyala</keluhan>
+
+
+    </laptop>
+
+
+    <laptop>
+
+
+        <id>50</id>
+
+
+        <customerId>53</customerId>
+
+
+        <merk>Samsung</merk>
+
+
+        <tipe>Galaxy Book 2</tipe>
+
+
+        <serialNumber>SNR9BWL4JE50</serialNumber>
+
+
+        <keluhan>Blue screen terus menerus</keluhan>
+
+
+    </laptop>
+
+
+    <laptop>
+
+
+        <id>51</id>
+
+
+        <customerId>43</customerId>
+
+
+        <merk>MSI</merk>
+
+
+        <tipe>Prestige 14</tipe>
+
+
+        <serialNumber>SN9XHT3FHA51</serialNumber>
+
+
+        <keluhan>Kamera laptop tidak berfungsi</keluhan>
+
+
+    </laptop>
+
+
+    <laptop>
+
+
+        <id>52</id>
+
+
+        <customerId>62</customerId>
+
+
+        <merk>Lenovo</merk>
+
+
+        <tipe>Yoga Slim 7</tipe>
+
+
+        <serialNumber>SNCVQS8JQD52</serialNumber>
+
+
+        <keluhan>Tidak bisa masuk Windows</keluhan>
+
+
+    </laptop>
+
+
+    <laptop>
+
+
+        <id>53</id>
+
+
+        <customerId>4</customerId>
+
+
+        <merk>Asus</merk>
+
+
+        <tipe>ROG Strix G15</tipe>
+
+
+        <serialNumber>SNB2Z48FSS53</serialNumber>
+
+
+        <keluhan>Baterai cepat habis</keluhan>
+
+
+    </laptop>
+
+
+    <laptop>
+
+
+        <id>54</id>
+
+
+        <customerId>84</customerId>
+
+
+        <merk>Axioo</merk>
+
+
+        <tipe>MyBook 14</tipe>
+
+
+        <serialNumber>SNMDJXVPJK54</serialNumber>
+
+
+        <keluhan>Suara speaker rusak</keluhan>
+
+
+    </laptop>
+
+
+    <laptop>
+
+
+        <id>55</id>
+
+
+        <customerId>7</customerId>
+
+
+        <merk>Acer</merk>
+
+
+        <tipe>Predator Helios</tipe>
+
+
+        <serialNumber>SNZBUMTJ4U55</serialNumber>
+
+
+        <keluhan>Layar blank putih</keluhan>
+
+
+    </laptop>
+
+
+    <laptop>
+
+
+        <id>56</id>
+
+
+        <customerId>87</customerId>
+
+
+        <merk>Samsung</merk>
+
+
+        <tipe>Galaxy Book 2</tipe>
+
+
+        <serialNumber>SN5GEPA6QQ56</serialNumber>
+
+
+        <keluhan>Kamera laptop tidak berfungsi</keluhan>
+
+
+    </laptop>
+
+
+    <laptop>
+
+
+        <id>57</id>
+
+
+        <customerId>95</customerId>
+
+
+        <merk>Apple</merk>
+
+
+        <tipe>MacBook Pro 13</tipe>
+
+
+        <serialNumber>SN4N4FUPP657</serialNumber>
+
+
+        <keluhan>Suara speaker rusak</keluhan>
+
+
+    </laptop>
+
+
+    <laptop>
+
+
+        <id>58</id>
+
+
+        <customerId>25</customerId>
+
+
+        <merk>Axioo</merk>
+
+
+        <tipe>MyBook 14</tipe>
+
+
+        <serialNumber>SNKCC9U6Z658</serialNumber>
+
+
+        <keluhan>Charger tidak mengisi daya</keluhan>
+
+
+    </laptop>
+
+
+    <laptop>
+
+
+        <id>59</id>
+
+
+        <customerId>3</customerId>
+
+
+        <merk>Acer</merk>
+
+
+        <tipe>Predator Helios</tipe>
+
+
+        <serialNumber>SN2WSPZGHR59</serialNumber>
+
+
+        <keluhan>Layar blank putih</keluhan>
+
+
+    </laptop>
+
+
+    <laptop>
+
+
+        <id>60</id>
+
+
+        <customerId>47</customerId>
+
+
+        <merk>Acer</merk>
+
+
+        <tipe>Predator Helios</tipe>
+
+
+        <serialNumber>SNAFDH9D9X60</serialNumber>
+
+
+        <keluhan>Layar bergaris</keluhan>
+
+
+    </laptop>
+
+
+    <laptop>
+
+
+        <id>61</id>
+
+
+        <customerId>4</customerId>
+
+
+        <merk>Toshiba</merk>
+
+
+        <tipe>Satellite L series</tipe>
+
+
+        <serialNumber>SNJVB4WU7361</serialNumber>
+
+
+        <keluhan>RAM perlu diupgrade</keluhan>
+
+
+    </laptop>
+
+
+    <laptop>
+
+
+        <id>62</id>
+
+
+        <customerId>68</customerId>
+
+
+        <merk>Acer</merk>
+
+
+        <tipe>Predator Helios</tipe>
+
+
+        <serialNumber>SNZDVXXA5U62</serialNumber>
+
+
+        <keluhan>Blue screen terus menerus</keluhan>
+
+
+    </laptop>
+
+
+    <laptop>
+
+
+        <id>63</id>
+
+
+        <customerId>46</customerId>
+
+
+        <merk>HP</merk>
+
+
+        <tipe>Victus 16</tipe>
+
+
+        <serialNumber>SNCPTKCQ6R63</serialNumber>
+
+
+        <keluhan>Layar blank putih</keluhan>
+
+
+    </laptop>
+
+
+    <laptop>
+
+
+        <id>64</id>
+
+
+        <customerId>37</customerId>
+
+
+        <merk>HP</merk>
+
+
+        <tipe>Omen 15</tipe>
+
+
+        <serialNumber>SN3JTM76MZ64</serialNumber>
+
+
+        <keluhan>Keyboard tidak berfungsi sebagian</keluhan>
+
+
+    </laptop>
+
+
+    <laptop>
+
+
+        <id>65</id>
+
+
+        <customerId>7</customerId>
+
+
+        <merk>Lenovo</merk>
+
+
+        <tipe>Legion 5</tipe>
+
+
+        <serialNumber>SN86BMRMEC65</serialNumber>
+
+
+        <keluhan>Sering hang dan lag</keluhan>
+
+
+    </laptop>
+
+
+    <laptop>
+
+
+        <id>66</id>
+
+
+        <customerId>89</customerId>
+
+
+        <merk>Dell</merk>
+
+
+        <tipe>Vostro 3400</tipe>
+
+
+        <serialNumber>SNAZT27Z5Z66</serialNumber>
+
+
+        <keluhan>Hardisk bad sector</keluhan>
+
+
+    </laptop>
+
+
+    <laptop>
+
+
+        <id>67</id>
+
+
+        <customerId>32</customerId>
+
+
+        <merk>Apple</merk>
+
+
+        <tipe>MacBook Air M1</tipe>
+
+
+        <serialNumber>SN8JZJDN2X67</serialNumber>
+
+
+        <keluhan>Tidak bisa masuk Windows</keluhan>
+
+
+    </laptop>
+
+
+    <laptop>
+
+
+        <id>68</id>
+
+
+        <customerId>16</customerId>
+
+
+        <merk>Apple</merk>
+
+
+        <tipe>MacBook Pro 13</tipe>
+
+
+        <serialNumber>SN439ZREKB68</serialNumber>
+
+
+        <keluhan>Kamera laptop tidak berfungsi</keluhan>
+
+
+    </laptop>
+
+
+    <laptop>
+
+
+        <id>69</id>
+
+
+        <customerId>18</customerId>
+
+
+        <merk>Apple</merk>
+
+
+        <tipe>MacBook Pro 16</tipe>
+
+
+        <serialNumber>SNME2WWUPS69</serialNumber>
+
+
+        <keluhan>Kamera laptop tidak berfungsi</keluhan>
+
+
+    </laptop>
+
+
+    <laptop>
+
+
+        <id>70</id>
+
+
+        <customerId>8</customerId>
+
+
+        <merk>Apple</merk>
+
+
+        <tipe>MacBook Pro 16</tipe>
+
+
+        <serialNumber>SNP8343QV670</serialNumber>
+
+
+        <keluhan>Baterai cepat habis</keluhan>
+
+
+    </laptop>
+
+
+    <laptop>
+
+
+        <id>71</id>
+
+
+        <customerId>34</customerId>
+
+
+        <merk>Asus</merk>
+
+
+        <tipe>ExpertBook B1</tipe>
+
+
+        <serialNumber>SNKSH5GHTC71</serialNumber>
+
+
+        <keluhan>Tidak bisa masuk Windows</keluhan>
+
+
+    </laptop>
+
+
+    <laptop>
+
+
+        <id>72</id>
+
+
+        <customerId>34</customerId>
+
+
+        <merk>HP</merk>
+
+
+        <tipe>240 G8</tipe>
+
+
+        <serialNumber>SNM8KYK53K72</serialNumber>
+
+
+        <keluhan>Keyboard tidak berfungsi sebagian</keluhan>
+
+
+    </laptop>
+
+
+    <laptop>
+
+
+        <id>73</id>
+
+
+        <customerId>1</customerId>
+
+
+        <merk>Dell</merk>
+
+
+        <tipe>Latitude 5420</tipe>
+
+
+        <serialNumber>SNVDGQBTMK73</serialNumber>
+
+
+        <keluhan>Terkena air/tumpahan cairan</keluhan>
+
+
+    </laptop>
+
+
+    <laptop>
+
+
+        <id>74</id>
+
+
+        <customerId>39</customerId>
+
+
+        <merk>Samsung</merk>
+
+
+        <tipe>Galaxy Book 2</tipe>
+
+
+        <serialNumber>SNMLZZEZWX74</serialNumber>
+
+
+        <keluhan>Kipas berisik</keluhan>
+
+
+    </laptop>
+
+
+    <laptop>
+
+
+        <id>75</id>
+
+
+        <customerId>16</customerId>
+
+
+        <merk>Samsung</merk>
+
+
+        <tipe>Notebook Odyssey</tipe>
+
+
+        <serialNumber>SNKBJKVVBW75</serialNumber>
+
+
+        <keluhan>Suara speaker rusak</keluhan>
+
+
+    </laptop>
+
+
+    <laptop>
+
+
+        <id>76</id>
+
+
+        <customerId>49</customerId>
+
+
+        <merk>Samsung</merk>
+
+
+        <tipe>Galaxy Book 2</tipe>
+
+
+        <serialNumber>SN8QP2M7DK76</serialNumber>
+
+
+        <keluhan>Engsel layar patah</keluhan>
+
+
+    </laptop>
+
+
+    <laptop>
+
+
+        <id>77</id>
+
+
+        <customerId>98</customerId>
+
+
+        <merk>Acer</merk>
+
+
+        <tipe>TravelMate P2</tipe>
+
+
+        <serialNumber>SN42BTRVCR77</serialNumber>
+
+
+        <keluhan>Layar bergaris</keluhan>
+
+
+    </laptop>
+
+
+    <laptop>
+
+
+        <id>78</id>
+
+
+        <customerId>53</customerId>
+
+
+        <merk>HP</merk>
+
+
+        <tipe>Omen 15</tipe>
+
+
+        <serialNumber>SNN7ZUAEZJ78</serialNumber>
+
+
+        <keluhan>Engsel layar patah</keluhan>
+
+
+    </laptop>
+
+
+    <laptop>
+
+
+        <id>79</id>
+
+
+        <customerId>85</customerId>
+
+
+        <merk>Lenovo</merk>
+
+
+        <tipe>Legion 5</tipe>
+
+
+        <serialNumber>SN94H6TB2E79</serialNumber>
+
+
+        <keluhan>Engsel layar patah</keluhan>
+
+
+    </laptop>
+
+
+    <laptop>
+
+
+        <id>80</id>
+
+
+        <customerId>50</customerId>
+
+
+        <merk>Toshiba</merk>
+
+
+        <tipe>Satellite L series</tipe>
+
+
+        <serialNumber>SN4B8ZN7CW80</serialNumber>
+
+
+        <keluhan>Layar bergaris</keluhan>
+
+
+    </laptop>
+
+
+    <laptop>
+
+
+        <id>81</id>
+
+
+        <customerId>20</customerId>
+
+
+        <merk>Toshiba</merk>
+
+
+        <tipe>Satellite L series</tipe>
+
+
+        <serialNumber>SNGTNQPM7S81</serialNumber>
+
+
+        <keluhan>Terkena air/tumpahan cairan</keluhan>
+
+
+    </laptop>
+
+
+    <laptop>
+
+
+        <id>82</id>
+
+
+        <customerId>22</customerId>
+
+
+        <merk>Apple</merk>
+
+
+        <tipe>MacBook Air M1</tipe>
+
+
+        <serialNumber>SNSD27BGB782</serialNumber>
+
+
+        <keluhan>Kamera laptop tidak berfungsi</keluhan>
+
+
+    </laptop>
+
+
+    <laptop>
+
+
+        <id>83</id>
+
+
+        <customerId>29</customerId>
+
+
+        <merk>Samsung</merk>
+
+
+        <tipe>Notebook Odyssey</tipe>
+
+
+        <serialNumber>SNV6GCT8YS83</serialNumber>
+
+
+        <keluhan>Layar blank putih</keluhan>
+
+
+    </laptop>
+
+
+    <laptop>
+
+
+        <id>84</id>
+
+
+        <customerId>74</customerId>
+
+
+        <merk>Axioo</merk>
+
+
+        <tipe>Hype 5</tipe>
+
+
+        <serialNumber>SN8NVYTDAV84</serialNumber>
+
+
+        <keluhan>Laptop tidak bisa menyala</keluhan>
+
+
+    </laptop>
+
+
+    <laptop>
+
+
+        <id>85</id>
+
+
+        <customerId>23</customerId>
+
+
+        <merk>Asus</merk>
+
+
+        <tipe>TUF Gaming A15</tipe>
+
+
+        <serialNumber>SNSUHX9FQG85</serialNumber>
+
+
+        <keluhan>Wifi tidak terdeteksi</keluhan>
+
+
+    </laptop>
+
+
+    <laptop>
+
+
+        <id>86</id>
+
+
+        <customerId>83</customerId>
+
+
+        <merk>Samsung</merk>
+
+
+        <tipe>Notebook Odyssey</tipe>
+
+
+        <serialNumber>SNBS5PSBJP86</serialNumber>
+
+
+        <keluhan>Sering hang dan lag</keluhan>
+
+
+    </laptop>
+
+
+    <laptop>
+
+
+        <id>87</id>
+
+
+        <customerId>92</customerId>
+
+
+        <merk>HP</merk>
+
+
+        <tipe>Victus 16</tipe>
+
+
+        <serialNumber>SNQFMQVYPH87</serialNumber>
+
+
+        <keluhan>Hardisk bad sector</keluhan>
+
+
+    </laptop>
+
+
+    <laptop>
+
+
+        <id>88</id>
+
+
+        <customerId>13</customerId>
+
+
+        <merk>Toshiba</merk>
+
+
+        <tipe>Satellite L series</tipe>
+
+
+        <serialNumber>SN8D892VS588</serialNumber>
+
+
+        <keluhan>RAM perlu diupgrade</keluhan>
+
+
+    </laptop>
+
+
+    <laptop>
+
+
+        <id>89</id>
+
+
+        <customerId>69</customerId>
+
+
+        <merk>Dell</merk>
+
+
+        <tipe>G15</tipe>
+
+
+        <serialNumber>SNFEY3NNLH89</serialNumber>
+
+
+        <keluhan>Keyboard tidak berfungsi sebagian</keluhan>
+
+
+    </laptop>
+
+
+    <laptop>
+
+
+        <id>90</id>
+
+
+        <customerId>83</customerId>
+
+
+        <merk>Axioo</merk>
+
+
+        <tipe>Pongo 14</tipe>
+
+
+        <serialNumber>SNF6SKMCBJ90</serialNumber>
+
+
+        <keluhan>Layar blank putih</keluhan>
+
+
+    </laptop>
+
+
+    <laptop>
+
+
+        <id>91</id>
+
+
+        <customerId>89</customerId>
+
+
+        <merk>Toshiba</merk>
+
+
+        <tipe>Dynabook Tecra</tipe>
+
+
+        <serialNumber>SNSDYPHJF591</serialNumber>
+
+
+        <keluhan>Baterai cepat habis</keluhan>
+
+
+    </laptop>
+
+
+    <laptop>
+
+
+        <id>92</id>
+
+
+        <customerId>53</customerId>
+
+
+        <merk>Asus</merk>
+
+
+        <tipe>Zenbook 13</tipe>
+
+
+        <serialNumber>SNFZDUU3VU92</serialNumber>
+
+
+        <keluhan>Tidak bisa masuk Windows</keluhan>
+
+
+    </laptop>
+
+
+    <laptop>
+
+
+        <id>93</id>
+
+
+        <customerId>61</customerId>
+
+
+        <merk>Dell</merk>
+
+
+        <tipe>Vostro 3400</tipe>
+
+
+        <serialNumber>SNACU8WJHM93</serialNumber>
+
+
+        <keluhan>Hardisk bad sector</keluhan>
+
+
+    </laptop>
+
+
+    <laptop>
+
+
+        <id>94</id>
+
+
+        <customerId>42</customerId>
+
+
+        <merk>Samsung</merk>
+
+
+        <tipe>Notebook Odyssey</tipe>
+
+
+        <serialNumber>SN9DPNEJQG94</serialNumber>
+
+
+        <keluhan>Terkena virus/malware</keluhan>
+
+
+    </laptop>
+
+
+    <laptop>
+
+
+        <id>95</id>
+
+
+        <customerId>64</customerId>
+
+
+        <merk>MSI</merk>
+
+
+        <tipe>Bravo 15</tipe>
+
+
+        <serialNumber>SN9ARWQBU695</serialNumber>
+
+
+        <keluhan>Hardisk bad sector</keluhan>
+
+
+    </laptop>
+
+
+    <laptop>
+
+
+        <id>96</id>
+
+
+        <customerId>84</customerId>
+
+
+        <merk>Asus</merk>
+
+
+        <tipe>Vivobook 14</tipe>
+
+
+        <serialNumber>SNUTWFHJ8M96</serialNumber>
+
+
+        <keluhan>Terkena virus/malware</keluhan>
+
+
+    </laptop>
+
+
+    <laptop>
+
+
+        <id>97</id>
+
+
+        <customerId>10</customerId>
+
+
+        <merk>Apple</merk>
+
+
+        <tipe>MacBook Pro 16</tipe>
+
+
+        <serialNumber>SNDM86VZXE97</serialNumber>
+
+
+        <keluhan>Hardisk bad sector</keluhan>
+
+
+    </laptop>
+
+
+    <laptop>
+
+
+        <id>98</id>
+
+
+        <customerId>32</customerId>
+
+
+        <merk>Acer</merk>
+
+
+        <tipe>TravelMate P2</tipe>
+
+
+        <serialNumber>SND8ERP5U998</serialNumber>
+
+
+        <keluhan>Hardisk bad sector</keluhan>
+
+
+    </laptop>
+
+
+    <laptop>
+
+
+        <id>99</id>
+
+
+        <customerId>83</customerId>
+
+
+        <merk>Apple</merk>
+
+
+        <tipe>MacBook Pro 16</tipe>
+
+
+        <serialNumber>SN4ZQ4JZTQ99</serialNumber>
+
+
+        <keluhan>Blue screen terus menerus</keluhan>
+
+
+    </laptop>
+
+
+    <laptop>
+
+
+        <id>100</id>
+
+
+        <customerId>22</customerId>
+
+
+        <merk>HP</merk>
+
+
+        <tipe>EliteBook 840</tipe>
+
+
+        <serialNumber>SNCNCJJZXC100</serialNumber>
+
+
+        <keluhan>Suara speaker rusak</keluhan>
+
+
+    </laptop>
+
+
+    <laptop>
+
+        <id>102</id>
+
+        <customerId>102</customerId>
+
+        <merk>Asus</merk>
+
+        <tipe>ROG</tipe>
+
+        <serialNumber>JBADNGIUABGFNI</serialNumber>
+
+        <keluhan>Mati total bangh</keluhan>
+
+    </laptop>
+
+    <laptop>
+        <id>103</id>
+        <customerId>103</customerId>
+        <merk>Asus</merk>
+        <tipe>ROG</tipe>
+        <serialNumber>fgjgfdjsj</serialNumber>
+        <keluhan>meletup</keluhan>
+    </laptop>
+</laptops>

@@ -2,15 +2,18 @@ package Service;
 
 import model.Laptop;
 import Repository.LaptopRepository;
+import Repository.CustomerRepository;
 
 import java.util.List;
 
 public class LaptopService {
 
     private final LaptopRepository laptopRepository;
+    private final CustomerRepository customerRepository;
 
     public LaptopService() {
         this.laptopRepository = new LaptopRepository();
+        this.customerRepository = new CustomerRepository();
     }
 
     public List<Laptop> getAllLaptops() {
@@ -29,6 +32,10 @@ public class LaptopService {
             return false;
         }
 
+        if (customerRepository.getCustomerById(laptop.getCustomerId()) == null) {
+            return false;
+        }
+
         if (isLaptopIdExists(laptop.getId())) {
             return false;
         }
@@ -39,6 +46,10 @@ public class LaptopService {
 
     public boolean updateLaptop(Laptop laptop) {
         if (!isLaptopValid(laptop)) {
+            return false;
+        }
+
+        if (customerRepository.getCustomerById(laptop.getCustomerId()) == null) {
             return false;
         }
 

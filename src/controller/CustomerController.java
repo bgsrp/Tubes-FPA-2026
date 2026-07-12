@@ -3,19 +3,28 @@ package controller;
 import Service.CustomerService;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.event.ActionEvent;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
+import javafx.scene.control.ButtonType;
+import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.stage.Stage;
 import model.Customer;
 
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class CustomerController implements Initializable {
+public class CustomerController implements Initializable, SearchableController {
 
     @FXML
     private TextField txtId;
@@ -42,6 +51,9 @@ public class CustomerController implements Initializable {
     private Button btnClear;
 
     @FXML
+    private Label lblTotalCustomer;
+
+    @FXML
     private TableView<Customer> tableCustomer;
 
     @FXML
@@ -58,6 +70,7 @@ public class CustomerController implements Initializable {
 
     private CustomerService customerService;
     private ObservableList<Customer> customerList;
+    private String searchKeyword = "";
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
@@ -70,6 +83,7 @@ public class CustomerController implements Initializable {
         colNama.setCellValueFactory(new PropertyValueFactory<>("nama"));
         colNoHP.setCellValueFactory(new PropertyValueFactory<>("noHP"));
         colAlamat.setCellValueFactory(new PropertyValueFactory<>("alamat"));
+        tableCustomer.setColumnResizePolicy(TableView.CONSTRAINED_RESIZE_POLICY);
 
         loadCustomerData();
 
@@ -92,60 +106,143 @@ public class CustomerController implements Initializable {
 
         customerList.clear();
 
-        customerList.addAll(customerService.getAllCustomers());
+        for (Customer customer : customerService.getAllCustomers()) {
+            if (matchesSearch(customer)) {
+                customerList.add(customer);
+            }
+        }
 
         tableCustomer.setItems(customerList);
+
+        if (lblTotalCustomer != null) {
+            lblTotalCustomer.setText(String.valueOf(customerService.getAllCustomers().size()));
+        }
+
+    }
+
+    @Override
+    public void setSearchKeyword(String keyword) {
+
+        searchKeyword = keyword != null ? keyword.trim().toLowerCase() : "";
+
+        loadCustomerData();
+
+    }
+
+    private boolean matchesSearch(Customer customer) {
+
+        if (searchKeyword.isEmpty()) {
+            return true;
+        }
+
+        return contains(customer.getId())
+                || contains(customer.getNama())
+                || contains(customer.getNoHP())
+                || contains(customer.getAlamat());
+
+    }
+
+    private boolean contains(String value) {
+
+        return value != null && value.toLowerCase().contains(searchKeyword);
 
     }
 
     @FXML
     private void handleTambah() {
 
-        Customer customer = new Customer(
-                txtId.getText(),
-                txtNama.getText(),
-                txtNoHP.getText(),
-                txtAlamat.getText()
-        );
+        try {
 
-        customerService.addCustomer(customer);
+            if (!isNumeric(txtId.getText())) {
+                showAlert(Alert.AlertType.ERROR, "Validasi ID", "ID Customer harus berupa angka.");
+                return;
+            }
 
-        loadCustomerData();
+            Customer customer = new Customer(
+                    txtId.getText().trim(),
+                    txtNama.getText().trim(),
+                    txtNoHP.getText().trim(),
+                    txtAlamat.getText().trim()
+            );
 
-        clearForm();
+            customerService.addCustomer(customer);
+
+            loadCustomerData();
+
+            clearForm();
+
+            showAlert(Alert.AlertType.INFORMATION, "Sukses", "Data customer berhasil ditambahkan.");
+
+        } catch (Exception e) {
+            showAlert(Alert.AlertType.ERROR, "Gagal", e.getMessage());
+        }
 
     }
 
     @FXML
     private void handleUbah() {
 
-        Customer customer = new Customer(
-                txtId.getText(),
-                txtNama.getText(),
-                txtNoHP.getText(),
-                txtAlamat.getText()
-        );
+        try {
 
-        customerService.updateCustomer(customer);
+            if (!isNumeric(txtId.getText())) {
+                showAlert(Alert.AlertType.ERROR, "Validasi ID", "ID Customer harus berupa angka.");
+                return;
+            }
 
-        loadCustomerData();
+            Customer customer = new Customer(
+                    txtId.getText().trim(),
+                    txtNama.getText().trim(),
+                    txtNoHP.getText().trim(),
+                    txtAlamat.getText().trim()
+            );
 
-        clearForm();
+            customerService.updateCustomer(customer);
+
+            loadCustomerData();
+
+            clearForm();
+
+            showAlert(Alert.AlertType.INFORMATION, "Sukses", "Data customer berhasil diperbarui.");
+
+        } catch (Exception e) {
+            showAlert(Alert.AlertType.ERROR, "Gagal", e.getMessage());
+        }
 
     }
 
     @FXML
     private void handleHapus() {
 
-        if (txtId.getText().isEmpty()) {
-            return;
+        try {
+
+            if (txtId.getText().isEmpty()) {
+                showAlert(Alert.AlertType.WARNING, "Validasi", "Pilih atau masukkan ID customer yang ingin dihapus.");
+                return;
+            }
+
+            if (!isNumeric(txtId.getText())) {
+                showAlert(Alert.AlertType.ERROR, "Validasi ID", "ID Customer harus berupa angka.");
+                return;
+            }
+
+            Alert confirm = new Alert(Alert.AlertType.CONFIRMATION);
+            confirm.setTitle("Konfirmasi Hapus");
+            confirm.setHeaderText(null);
+            confirm.setContentText("Apakah Anda yakin ingin menghapus data customer dengan ID " + txtId.getText() + "?");
+
+            if (confirm.showAndWait().orElse(ButtonType.CANCEL) == ButtonType.OK) {
+                customerService.deleteCustomer(txtId.getText().trim());
+
+                loadCustomerData();
+
+                clearForm();
+
+                showAlert(Alert.AlertType.INFORMATION, "Sukses", "Data customer berhasil dihapus.");
+            }
+
+        } catch (Exception e) {
+            showAlert(Alert.AlertType.ERROR, "Gagal", e.getMessage());
         }
-
-        customerService.deleteCustomer(txtId.getText());
-
-        loadCustomerData();
-
-        clearForm();
 
     }
 
@@ -164,6 +261,41 @@ public class CustomerController implements Initializable {
         txtAlamat.clear();
 
         tableCustomer.getSelectionModel().clearSelection();
+
+    }
+
+    private boolean isNumeric(String value) {
+
+        return value != null && value.trim().matches("\\d+");
+
+    }
+
+    private void showAlert(Alert.AlertType alertType, String title, String message) {
+
+        Alert alert = new Alert(alertType);
+        alert.setTitle(title);
+        alert.setHeaderText(null);
+        alert.setContentText(message);
+        alert.showAndWait();
+
+    }
+
+    @FXML
+    private void backToDashboard(ActionEvent event) {
+
+        try {
+
+            Parent root = FXMLLoader.load(getClass().getResource("/view/Dashboard.fxml"));
+            Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            stage.setScene(new Scene(root, 1400, 800));
+            stage.setMaximized(true);
+            stage.show();
+
+        } catch (Exception e) {
+
+            e.printStackTrace();
+
+        }
 
     }
 

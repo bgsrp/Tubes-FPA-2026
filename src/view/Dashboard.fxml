@@ -7,84 +7,113 @@
 <?import javafx.scene.chart.PieChart?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.HBox?>
-<?import javafx.scene.layout.Priority?>
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.layout.VBox?>
 
-<BorderPane fx:controller="controller.DashboardController"
-            xmlns="http://javafx.com/javafx/21"
-            xmlns:fx="http://javafx.com/fxml/1"
-            prefHeight="800.0"
-            prefWidth="1400.0"
-            stylesheets="@../assets/style.css">
+<BorderPane fx:id="rootPane" prefHeight="800.0" prefWidth="1400.0" stylesheets="@../assets/style.css" xmlns="http://javafx.com/javafx/9.0.4" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.DashboardController">
 
     <!-- ========================= -->
     <!-- SIDEBAR -->
     <!-- ========================= -->
 
     <left>
-        <VBox fx:id="sidebar"
-              spacing="12"
-              prefWidth="220"
-              styleClass="sidebar">
+        <VBox fx:id="sidebar" prefWidth="220" spacing="8" styleClass="sidebar">
 
             <padding>
-                <Insets top="20" right="15" bottom="20" left="15"/>
+                <Insets bottom="20" left="15" right="15" top="20" />
             </padding>
 
             <!-- Logo -->
 
-            <VBox alignment="CENTER_LEFT" spacing="3">
+            <HBox alignment="CENTER_LEFT" spacing="8">
 
-                <Label text="LaptopCare"
-                       styleClass="logo-title"/>
+                <ImageView fitHeight="32" fitWidth="32" preserveRatio="true">
+                    <image>
+                        <Image url="@../assets/icons/Logo2.png" />
+                    </image>
+                    <effect>
+                        <ColorAdjust brightness="1.0" />
+                    </effect>
+                </ImageView>
 
-                <Label text="Repair Management"
-                       styleClass="logo-subtitle"/>
+                <VBox alignment="CENTER_LEFT" spacing="3">
 
-            </VBox>
+                    <Label styleClass="logo-title" text="LaptopCare" />
+
+                    <Label styleClass="logo-subtitle" text="Repair Management" />
+
+                </VBox>
+
+            </HBox>
 
             <!-- Menu -->
 
-            <Button fx:id="btnDashboard"
-                    text="Dashboard"
-                    maxWidth="Infinity"
-                    onAction="#openDashboard"
-                    styleClass="menu-button"/>
+            <Button fx:id="btnDashboard" contentDisplay="LEFT" graphicTextGap="10" maxWidth="Infinity" onAction="#openDashboard" styleClass="menu-button" text="Dashboard">
+                <graphic>
+                    <ImageView fitHeight="18" fitWidth="18" preserveRatio="true">
+                        <image>
+                            <Image url="@../assets/icons/dashboard.png" />
+                        </image>
+                    </ImageView>
+                </graphic>
+            </Button>
 
-            <Button fx:id="btnCustomer"
-                    text="Customer"
-                    maxWidth="Infinity"
-                    onAction="#openCustomer"
-                    styleClass="menu-button"/>
+            <Button fx:id="btnCustomer" contentDisplay="LEFT" graphicTextGap="10" maxWidth="Infinity" onAction="#openCustomer" styleClass="menu-button" text="Customer">
+                <graphic>
+                    <ImageView fitHeight="18" fitWidth="18" preserveRatio="true">
+                        <image>
+                            <Image url="@../assets/icons/customer.png" />
+                        </image>
+                    </ImageView>
+                </graphic>
+            </Button>
 
-            <Button fx:id="btnLaptop"
-                    text="Laptop"
-                    maxWidth="Infinity"
-                    onAction="#openLaptop"
-                    styleClass="menu-button"/>
+            <Button fx:id="btnLaptop" contentDisplay="LEFT" graphicTextGap="10" maxWidth="Infinity" onAction="#openLaptop" styleClass="menu-button" text="Laptop">
+                <graphic>
+                    <ImageView fitHeight="18" fitWidth="18" preserveRatio="true">
+                        <image>
+                            <Image url="@../assets/icons/laptop.png" />
+                        </image>
+                    </ImageView>
+                </graphic>
+            </Button>
 
-            <Button fx:id="btnService"
-                    text="Service"
-                    maxWidth="Infinity"
-                    onAction="#openService"
-                    styleClass="menu-button"/>
+            <Button fx:id="btnService" contentDisplay="LEFT" graphicTextGap="10" maxWidth="Infinity" onAction="#openService" styleClass="menu-button" text="Service">
+                <graphic>
+                    <ImageView fitHeight="18" fitWidth="18" preserveRatio="true">
+                        <image>
+                            <Image url="@../assets/icons/service.png" />
+                        </image>
+                    </ImageView>
+                </graphic>
+            </Button>
 
-            <VBox VBox.vgrow="ALWAYS"/>
+            <VBox VBox.vgrow="ALWAYS" />
 
-            <Button fx:id="btnLogout"
-                    text="Logout"
-                    maxWidth="Infinity"
-                    onAction="#logout"
-                    styleClass="logout-button"/>
+            <Button fx:id="btnLogout" contentDisplay="LEFT" graphicTextGap="10" maxWidth="Infinity" onAction="#logout" styleClass="logout-button" text="Keluar">
+                <graphic>
+                    <ImageView fitHeight="18" fitWidth="18" preserveRatio="true">
+                        <image>
+                            <Image url="@../assets/icons/exit3.png" />
+                        </image>
+                        <effect>
+                            <ColorAdjust brightness="1.0" />
+                        </effect>
+                    </ImageView>
+                </graphic>
+            </Button>
 
         </VBox>
     </left>
@@ -95,25 +124,17 @@
 
     <top>
 
-        <HBox alignment="CENTER_LEFT"
-              spacing="20"
-              styleClass="header">
+        <HBox alignment="CENTER_LEFT" spacing="20" styleClass="header">
 
             <padding>
-                <Insets top="15"
-                        right="20"
-                        bottom="15"
-                        left="20"/>
+                <Insets bottom="15" left="20" right="20" top="15" />
             </padding>
 
-            <Label text="Dashboard Overview"
-                   styleClass="header-title"/>
+            <Label fx:id="lblHeaderTitle" styleClass="header-title" text="Dashboard Overview" />
 
-            <HBox HBox.hgrow="ALWAYS"/>
+            <HBox HBox.hgrow="ALWAYS" />
 
-            <TextField fx:id="txtSearch"
-                       promptText="Search customer, laptop, atau service..."
-                       prefWidth="320"/>
+            <TextField fx:id="txtSearch" prefWidth="340" promptText="Cari customer, laptop, atau service..." styleClass="header-search" />
 
         </HBox>
 
@@ -125,53 +146,45 @@
 
     <center>
 
-        <VBox spacing="20"
-              styleClass="content">
+        <ScrollPane fitToHeight="true" fitToWidth="true" styleClass="content-scroll">
+
+        <content>
+
+        <VBox fx:id="dashboardContent" spacing="20" styleClass="content">
 
             <padding>
-                <Insets top="20"
-                        right="20"
-                        bottom="20"
-                        left="20"/>
+                <Insets bottom="20" left="20" right="20" top="20" />
             </padding>
 
             <!-- ========================= -->
             <!-- STATISTIC CARD -->
             <!-- ========================= -->
 
-            <GridPane hgap="15"
-                      vgap="15">
+            <GridPane hgap="15" vgap="15">
 
                 <columnConstraints>
 
-                    <ColumnConstraints hgrow="ALWAYS"/>
+                    <ColumnConstraints hgrow="ALWAYS" />
 
-                    <ColumnConstraints hgrow="ALWAYS"/>
+                    <ColumnConstraints hgrow="ALWAYS" />
 
-                    <ColumnConstraints hgrow="ALWAYS"/>
+                    <ColumnConstraints hgrow="ALWAYS" />
 
-                    <ColumnConstraints hgrow="ALWAYS"/>
+                    <ColumnConstraints hgrow="ALWAYS" />
 
                 </columnConstraints>
 
                 <!-- Card 1 -->
 
-                <AnchorPane GridPane.columnIndex="0"
-                            prefHeight="110"
-                            styleClass="card">
+                <AnchorPane prefHeight="110" styleClass="card" GridPane.columnIndex="0">
 
                     <children>
 
-                        <VBox spacing="8"
-                              AnchorPane.topAnchor="15"
-                              AnchorPane.leftAnchor="15">
+                        <VBox spacing="8" AnchorPane.leftAnchor="15" AnchorPane.topAnchor="15">
 
-                            <Label text="TOTAL CUSTOMER"
-                                   styleClass="card-title"/>
+                            <Label styleClass="card-title" text="TOTAL CUSTOMER" />
 
-                            <Label fx:id="lblTotalCustomer"
-                                   text="0"
-                                   styleClass="card-value"/>
+                            <Label fx:id="lblTotalCustomer" styleClass="card-value" text="0" />
 
                         </VBox>
 
@@ -181,22 +194,15 @@
 
                 <!-- Card 2 -->
 
-                <AnchorPane GridPane.columnIndex="1"
-                            prefHeight="110"
-                            styleClass="card">
+                <AnchorPane prefHeight="110" styleClass="card" GridPane.columnIndex="1">
 
                     <children>
 
-                        <VBox spacing="8"
-                              AnchorPane.topAnchor="15"
-                              AnchorPane.leftAnchor="15">
+                        <VBox spacing="8" AnchorPane.leftAnchor="15" AnchorPane.topAnchor="15">
 
-                            <Label text="TOTAL LAPTOP"
-                                   styleClass="card-title"/>
+                            <Label styleClass="card-title" text="TOTAL LAPTOP" />
 
-                            <Label fx:id="lblTotalLaptop"
-                                   text="0"
-                                   styleClass="card-value"/>
+                            <Label fx:id="lblTotalLaptop" styleClass="card-value" text="0" />
 
                         </VBox>
 
@@ -206,22 +212,15 @@
 
                 <!-- Card 3 -->
 
-                <AnchorPane GridPane.columnIndex="2"
-                            prefHeight="110"
-                            styleClass="card">
+                <AnchorPane prefHeight="110" styleClass="card" GridPane.columnIndex="2">
 
                     <children>
 
-                        <VBox spacing="8"
-                              AnchorPane.topAnchor="15"
-                              AnchorPane.leftAnchor="15">
+                        <VBox spacing="8" AnchorPane.leftAnchor="15" AnchorPane.topAnchor="15">
 
-                            <Label text="ACTIVE SERVICE"
-                                   styleClass="card-title"/>
+                            <Label styleClass="card-title" text="ACTIVE SERVICE" />
 
-                            <Label fx:id="lblActiveService"
-                                   text="0"
-                                   styleClass="card-value"/>
+                            <Label fx:id="lblActiveService" styleClass="card-value" text="0" />
 
                         </VBox>
 
@@ -231,161 +230,119 @@
 
                 <!-- Card 4 -->
 
-                <AnchorPane GridPane.columnIndex="3"
-                            prefHeight="110"
-                            styleClass="card">
+                <AnchorPane prefHeight="110" styleClass="card" GridPane.columnIndex="3">
 
                     <children>
 
-                        <VBox spacing="8"
-                              AnchorPane.topAnchor="15"
-                              AnchorPane.leftAnchor="15">
+                        <VBox spacing="8" AnchorPane.leftAnchor="15" AnchorPane.topAnchor="15">
 
-                            <Label text="TOTAL REVENUE"
-                                   styleClass="card-title"/>
+                            <Label styleClass="card-title" text="TOTAL REVENUE" />
 
-                            <Label fx:id="lblTotalRevenue"
-                                   text="Rp 0"
-                                   styleClass="card-value"/>
+                            <Label fx:id="lblTotalRevenue" styleClass="card-value" text="Rp 0" />
 
                         </VBox>
 
                     </children>
 
                 </AnchorPane>
+            <rowConstraints>
+               <RowConstraints />
+            </rowConstraints>
 
             </GridPane>
                         <!-- ========================= -->
-            <!-- CHART SECTION -->
-            <!-- ========================= -->
+                        <!-- CHART SECTION -->
+                        <!-- ========================= -->
 
-            <HBox spacing="20"
-                  VBox.vgrow="ALWAYS">
+                        <HBox spacing="20" VBox.vgrow="ALWAYS">
 
-                <!-- ========================= -->
-                <!-- BAR CHART -->
-                <!-- ========================= -->
+                            <!-- ========================= -->
+                            <!-- LINE CHART -->
+                            <!-- ========================= -->
 
-                <VBox spacing="10"
-                      styleClass="chart-container"
-                      HBox.hgrow="ALWAYS">
+                            <VBox spacing="10" styleClass="chart-container" HBox.hgrow="ALWAYS">
 
-                    <Label text="Monthly Service Statistics"
-                           styleClass="section-title"/>
+                                <Label styleClass="section-title" text="Monthly Service Statistics" />
 
-                    <BarChart fx:id="barChartService"
-                              animated="false"
-                              legendVisible="false"
-                              categoryGap="20"
-                              VBox.vgrow="ALWAYS">
+                                <BarChart fx:id="barChartService" animated="false" legendVisible="false" VBox.vgrow="ALWAYS">
 
-                        <xAxis>
-                            <CategoryAxis
-                                    fx:id="categoryAxis"
-                                    label="Month"/>
-                        </xAxis>
+                                    <xAxis>
+                                        <CategoryAxis fx:id="categoryAxis" label="Month" />
+                                    </xAxis>
 
-                        <yAxis>
-                            <NumberAxis
-                                    fx:id="numberAxis"
-                                    label="Total Service"/>
-                        </yAxis>
+                                    <yAxis>
+                                        <NumberAxis fx:id="numberAxis" label="Total Service" />
+                                    </yAxis>
 
-                    </BarChart>
+                                </BarChart>
 
-                </VBox>
+                            </VBox>
 
-                <!-- ========================= -->
-                <!-- PIE CHART -->
-                <!-- ========================= -->
+                            <!-- ========================= -->
+                            <!-- PIE CHART -->
+                            <!-- ========================= -->
 
-                <VBox spacing="10"
-                      prefWidth="350"
-                      styleClass="chart-container">
+                            <VBox prefWidth="350" spacing="10" styleClass="chart-container">
 
-                    <Label text="Service Status"
-                           styleClass="section-title"/>
+                                <Label styleClass="section-title" text="Service Status" />
 
-                    <PieChart fx:id="pieChartStatus"
-                              labelsVisible="true"
-                              legendVisible="true"
-                              clockwise="true"
-                              prefHeight="320"/>
+                                <PieChart fx:id="pieChartStatus" clockwise="true" labelsVisible="true" legendVisible="true" prefHeight="320" />
 
-                    <!-- Ringkasan -->
+                                <!-- Ringkasan -->
 
-                    <GridPane hgap="10"
-                              vgap="10">
+                                <GridPane hgap="10" vgap="10">
 
-                        <columnConstraints>
+                                    <columnConstraints>
 
-                            <ColumnConstraints percentWidth="70"/>
+                                        <ColumnConstraints percentWidth="70" />
 
-                            <ColumnConstraints percentWidth="30"/>
+                                        <ColumnConstraints percentWidth="30" />
 
-                        </columnConstraints>
+                                    </columnConstraints>
 
-                        <Label text="Completed"/>
+                                    <Label text="Selesai" />
 
-                        <Label fx:id="lblCompleted"
-                               GridPane.columnIndex="1"
-                               text="0"/>
+                                    <Label fx:id="lblCompleted" text="0" GridPane.columnIndex="1" />
 
-                        <Label text="In Progress"
-                               GridPane.rowIndex="1"/>
+                                    <Label text="Dalam Proses" GridPane.rowIndex="1" />
 
-                        <Label fx:id="lblProgress"
-                               GridPane.columnIndex="1"
-                               GridPane.rowIndex="1"
-                               text="0"/>
+                                    <Label fx:id="lblProgress" text="0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
 
-                        <Label text="Waiting"
-                               GridPane.rowIndex="2"/>
+                                    <Label text="Menunggu" GridPane.rowIndex="2" />
 
-                        <Label fx:id="lblWaiting"
-                               GridPane.columnIndex="1"
-                               GridPane.rowIndex="2"
-                               text="0"/>
+                                    <Label fx:id="lblWaiting" text="0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                  <rowConstraints>
+                     <RowConstraints />
+                     <RowConstraints />
+                     <RowConstraints />
+                  </rowConstraints>
 
-                    </GridPane>
+                                </GridPane>
 
-                </VBox>
+                            </VBox>
 
-            </HBox>
+                        </HBox>
                         <!-- ========================= -->
             <!-- RECENT SERVICE TABLE -->
             <!-- ========================= -->
 
-            <VBox spacing="10"
-                  VBox.vgrow="ALWAYS">
+            <VBox spacing="10" VBox.vgrow="ALWAYS">
 
-                <Label text="Recent Service"
-                       styleClass="section-title"/>
+                <Label styleClass="section-title" text="Recent Service" />
 
-                <TableView fx:id="tableRecentService"
-                           VBox.vgrow="ALWAYS">
+                <TableView fx:id="tableRecentService" VBox.vgrow="ALWAYS">
 
                     <columns>
 
-                        <TableColumn fx:id="colServiceId"
-                                     prefWidth="120"
-                                     text="Service ID"/>
+                        <TableColumn fx:id="colServiceId" prefWidth="151.19998168945312" text="Service ID" />
 
-                        <TableColumn fx:id="colCustomer"
-                                     prefWidth="220"
-                                     text="Customer"/>
+                        <TableColumn fx:id="colCustomer" prefWidth="240.79995727539062" text="Customer" />
 
-                        <TableColumn fx:id="colLaptop"
-                                     prefWidth="220"
-                                     text="Laptop"/>
+                        <TableColumn fx:id="colLaptop" prefWidth="207.20001220703125" text="Laptop" />
 
-                        <TableColumn fx:id="colStatus"
-                                     prefWidth="160"
-                                     text="Status"/>
+                        <TableColumn fx:id="colStatus" prefWidth="250.40008544921875" text="Status" />
 
-                        <TableColumn fx:id="colCost"
-                                     prefWidth="180"
-                                     text="Cost"/>
+                        <TableColumn fx:id="colCost" prefWidth="272.7999267578125" text="Cost" />
 
                     </columns>
 
@@ -394,6 +351,10 @@
             </VBox>
 
         </VBox>
+
+        </content>
+
+        </ScrollPane>
 
     </center>
 

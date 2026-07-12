@@ -13,7 +13,7 @@ import org.w3c.dom.NodeList;
 
 public class CustomerRepository {
 
-    private static final String FILE_PATH = "src/xml/customer.xml";
+    private static final String FILE_PATH = "xml/customer.xml";
     private static final String ROOT = "customers";
 
     // READ ALL

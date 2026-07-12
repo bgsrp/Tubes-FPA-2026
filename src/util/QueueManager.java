@@ -2,6 +2,7 @@ package util;
 
 import model.Service;
 
+import java.util.Collection;
 import java.util.LinkedList;
 import java.util.Queue;
 
@@ -11,6 +12,21 @@ public class QueueManager {
 
     public QueueManager() {
         serviceQueue = new LinkedList<>();
+    }
+
+    /**
+     * Mengganti isi antrean dengan data terbaru.
+     */
+    public void load(Collection<Service> services) {
+        serviceQueue.clear();
+
+        if (services == null) {
+            return;
+        }
+
+        for (Service service : services) {
+            enqueue(service);
+        }
     }
 
     /**

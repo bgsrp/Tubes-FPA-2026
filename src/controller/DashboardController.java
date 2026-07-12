@@ -1,19 +1,33 @@
 package controller;
 
 import java.net.URL;
+import java.util.LinkedHashMap;
+import java.util.Locale;
+import java.util.Map;
 import java.util.ResourceBundle;
 
+import javafx.collections.FXCollections;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 
+import javafx.geometry.Pos;
+import javafx.scene.Node;
+import javafx.scene.Parent;
 import javafx.scene.chart.BarChart;
+import javafx.scene.chart.NumberAxis;
 import javafx.scene.chart.PieChart;
 
 import javafx.scene.control.Button;
+import javafx.scene.control.ContentDisplay;
 import javafx.scene.control.Label;
+import javafx.scene.control.TableCell;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
+import javafx.scene.layout.BorderPane;
+import javafx.scene.layout.VBox;
+import javafx.scene.shape.Circle;
 
 import model.Service;
 
@@ -22,6 +36,17 @@ import Service.LaptopService;
 import Service.ServiceService;
 
 public class DashboardController implements Initializable {
+
+    private static final Map<String, String> STATUS_LABELS = new LinkedHashMap<>();
+
+    static {
+        STATUS_LABELS.put(ServiceService.STATUS_WAITING, "Menunggu");
+        STATUS_LABELS.put(ServiceService.STATUS_IN_PROGRESS, "Dalam Proses");
+        STATUS_LABELS.put(ServiceService.STATUS_COMPLETED, "Selesai");
+    }
+
+    @FXML
+    private BorderPane rootPane;
 
     // =========================
     // SIDEBAR
@@ -48,6 +73,12 @@ public class DashboardController implements Initializable {
 
     @FXML
     private TextField txtSearch;
+
+    @FXML
+    private Label lblHeaderTitle;
+
+    @FXML
+    private VBox dashboardContent;
 
     // =========================
     // STATISTIC LABEL
@@ -82,6 +113,9 @@ public class DashboardController implements Initializable {
     private BarChart<String, Number> barChartService;
 
     @FXML
+    private NumberAxis numberAxis;
+
+    @FXML
     private PieChart pieChartStatus;
 
     // =========================
@@ -113,6 +147,9 @@ public class DashboardController implements Initializable {
     private CustomerService customerService;
     private LaptopService laptopService;
     private ServiceService serviceService;
+    private Node dashboardView;
+    private SearchableController activeSearchController;
+    private boolean showingDashboard;
 
     // =========================
     // INITIALIZE
@@ -125,7 +162,12 @@ public class DashboardController implements Initializable {
         laptopService = new LaptopService();
         serviceService = new ServiceService();
 
+        dashboardView = dashboardContent;
+        showingDashboard = true;
+
         initializeTable();
+
+        initializeSearch();
 
         loadStatistics();
 
@@ -135,6 +177,8 @@ public class DashboardController implements Initializable {
 
         loadRecentService();
 
+        setActiveMenuButton(btnDashboard);
+
     }
         // =========================
     // NAVIGATION
@@ -143,29 +187,53 @@ public class DashboardController implements Initializable {
     @FXML
     private void openDashboard() {
 
-        // Sudah berada di halaman Dashboard,
-        // sehingga tidak perlu melakukan perpindahan scene.
+        lblHeaderTitle.setText("Dashboard Overview");
+
+        rootPane.setCenter(dashboardView);
+        activeSearchController = null;
+        showingDashboard = true;
+
+        refreshAll();
+
+        setActiveMenuButton(btnDashboard);
 
     }
 
     @FXML
     private void openCustomer() {
 
-        openPage("/view/Customer.fxml");
+        openPage("/view/Customer.fxml", "Data Customer");
+        setActiveMenuButton(btnCustomer);
 
     }
 
     @FXML
     private void openLaptop() {
 
-        openPage("/view/Laptop.fxml");
+        openPage("/view/Laptop.fxml", "Manajemen Data Laptop");
+        setActiveMenuButton(btnLaptop);
 
     }
 
     @FXML
     private void openService() {
 
-        openPage("/view/Service.fxml");
+        openPage("/view/Service.fxml", "Manajemen Service Laptop");
+        setActiveMenuButton(btnService);
+
+    }
+
+    // =========================
+    // ACTIVE MENU INDICATOR
+    // =========================
+
+    private void setActiveMenuButton(Button active) {
+
+        for (Button button : new Button[] { btnDashboard, btnCustomer, btnLaptop, btnService }) {
+            button.getStyleClass().remove("menu-button-active");
+        }
+
+        active.getStyleClass().add("menu-button-active");
 
     }
 
@@ -182,24 +250,29 @@ public class DashboardController implements Initializable {
     // PAGE LOADER
     // =========================
 
-    private void openPage(String fxmlPath) {
+    private void openPage(String fxmlPath, String title) {
 
         try {
 
-            javafx.fxml.FXMLLoader loader =
-                    new javafx.fxml.FXMLLoader(getClass().getResource(fxmlPath));
+            FXMLLoader loader =
+                    new FXMLLoader(getClass().getResource(fxmlPath));
 
-            javafx.scene.Parent root = loader.load();
+            Parent page = loader.load();
+            Object controller = loader.getController();
 
-            javafx.stage.Stage stage =
-                    (javafx.stage.Stage) btnDashboard.getScene().getWindow();
+            lblHeaderTitle.setText(title);
 
-            javafx.scene.Scene scene =
-                    new javafx.scene.Scene(root);
+            rootPane.setCenter(page);
+            showingDashboard = false;
+            activeSearchController = controller instanceof SearchableController
+                    ? (SearchableController) controller
+                    : null;
 
-            stage.setScene(scene);
+            if (txtSearch != null) {
+                txtSearch.clear();
+            }
 
-            stage.show();
+            applySearch("");
 
         } catch (Exception e) {
 
@@ -226,8 +299,11 @@ public class DashboardController implements Initializable {
         colStatus.setCellValueFactory(
                 new javafx.scene.control.cell.PropertyValueFactory<>("status"));
 
+        colStatus.setCellFactory(column -> new StatusBadgeCell());
+
         colCost.setCellValueFactory(
                 new javafx.scene.control.cell.PropertyValueFactory<>("biaya"));
+        tableRecentService.setColumnResizePolicy(TableView.CONSTRAINED_RESIZE_POLICY);
 
     }
 
@@ -243,7 +319,7 @@ public class DashboardController implements Initializable {
 
             int totalLaptop = laptopService.getAllLaptops().size();
 
-            int totalService = serviceService.getAllServices().size();
+            int activeService = serviceService.getWaitingService() + serviceService.getProgressService();
 
             double totalRevenue = serviceService.getTotalRevenue();
 
@@ -251,7 +327,7 @@ public class DashboardController implements Initializable {
 
             lblTotalLaptop.setText(String.valueOf(totalLaptop));
 
-            lblActiveService.setText(String.valueOf(totalService));
+            lblActiveService.setText(String.valueOf(activeService));
 
             lblTotalRevenue.setText(
                     String.format("Rp %,.0f", totalRevenue));
@@ -265,7 +341,7 @@ public class DashboardController implements Initializable {
     }
 
     // =========================
-    // LOAD BAR CHART
+    // LOAD LINE CHART
     // =========================
 
     private void loadBarChart() {
@@ -277,29 +353,18 @@ public class DashboardController implements Initializable {
 
         try {
 
-            series.getData().add(
-                    new javafx.scene.chart.XYChart.Data<>("Jan",
-                            serviceService.getMonthlyService("Jan")));
-
-            series.getData().add(
-                    new javafx.scene.chart.XYChart.Data<>("Feb",
-                            serviceService.getMonthlyService("Feb")));
-
-            series.getData().add(
-                    new javafx.scene.chart.XYChart.Data<>("Mar",
-                            serviceService.getMonthlyService("Mar")));
-
-            series.getData().add(
-                    new javafx.scene.chart.XYChart.Data<>("Apr",
-                            serviceService.getMonthlyService("Apr")));
-
-            series.getData().add(
-                    new javafx.scene.chart.XYChart.Data<>("Mei",
-                            serviceService.getMonthlyService("Mei")));
-
-            series.getData().add(
-                    new javafx.scene.chart.XYChart.Data<>("Jun",
-                            serviceService.getMonthlyService("Jun")));
+            addMonthlyData(series, "Jan");
+            addMonthlyData(series, "Feb");
+            addMonthlyData(series, "Mar");
+            addMonthlyData(series, "Apr");
+            addMonthlyData(series, "Mei");
+            addMonthlyData(series, "Jun");
+            addMonthlyData(series, "Jul");
+            addMonthlyData(series, "Agu");
+            addMonthlyData(series, "Sep");
+            addMonthlyData(series, "Okt");
+            addMonthlyData(series, "Nov");
+            addMonthlyData(series, "Des");
 
         } catch (Exception e) {
 
@@ -308,6 +373,47 @@ public class DashboardController implements Initializable {
         }
 
         barChartService.getData().add(series);
+
+        int maxCount = 1;
+        for (javafx.scene.chart.XYChart.Data<String, Number> data : series.getData()) {
+            maxCount = Math.max(maxCount, data.getYValue().intValue());
+        }
+
+        numberAxis.setAutoRanging(false);
+        numberAxis.setLowerBound(0);
+        numberAxis.setUpperBound(maxCount);
+        numberAxis.setTickUnit(1);
+
+    }
+
+    private void addMonthlyData(javafx.scene.chart.XYChart.Series<String, Number> series, String month) {
+
+        series.getData().add(
+                new javafx.scene.chart.XYChart.Data<>(
+                        month,
+                        serviceService.getMonthlyService(month)
+                )
+        );
+
+    }
+
+    private void initializeSearch() {
+
+        txtSearch.textProperty().addListener(
+                (observable, oldValue, newValue) -> applySearch(newValue));
+
+    }
+
+    private void applySearch(String keyword) {
+
+        if (showingDashboard) {
+            filterRecentService(keyword);
+            return;
+        }
+
+        if (activeSearchController != null) {
+            activeSearchController.setSearchKeyword(keyword);
+        }
 
     }
 
@@ -334,13 +440,13 @@ public class DashboardController implements Initializable {
             lblWaiting.setText(String.valueOf(waiting));
 
             pieChartStatus.getData().add(
-                    new PieChart.Data("Completed", completed));
+                    new PieChart.Data("Selesai", completed));
 
             pieChartStatus.getData().add(
-                    new PieChart.Data("In Progress", progress));
+                    new PieChart.Data("Dalam Proses", progress));
 
             pieChartStatus.getData().add(
-                    new PieChart.Data("Waiting", waiting));
+                    new PieChart.Data("Menunggu", waiting));
 
         } catch (Exception e) {
 
@@ -358,16 +464,45 @@ public class DashboardController implements Initializable {
 
         try {
 
-            tableRecentService.getItems().clear();
-
-            tableRecentService.getItems().addAll(
-                    serviceService.getRecentServices());
+            filterRecentService(txtSearch.getText());
 
         } catch (Exception e) {
 
             e.printStackTrace();
 
         }
+
+    }
+
+    private void filterRecentService(String keyword) {
+
+        String search = keyword != null ? keyword.trim().toLowerCase() : "";
+
+        tableRecentService.setItems(FXCollections.observableArrayList(
+                serviceService.getRecentServices().stream()
+                        .filter(service -> matchesRecentService(service, search))
+                        .collect(java.util.stream.Collectors.toList())
+        ));
+
+    }
+
+    private boolean matchesRecentService(Service service, String search) {
+
+        if (search.isEmpty()) {
+            return true;
+        }
+
+        return contains(service.getId(), search)
+                || contains(service.getCustomer(), search)
+                || contains(service.getLaptop(), search)
+                || contains(service.getStatus(), search)
+                || contains(String.valueOf(service.getBiaya()), search);
+
+    }
+
+    private boolean contains(String value, String search) {
+
+        return value != null && value.toLowerCase().contains(search);
 
     }
         // =========================
@@ -410,6 +545,54 @@ public class DashboardController implements Initializable {
         clearSearch();
 
         refreshDashboard();
+
+    }
+
+    // =========================
+    // STATUS BADGE CELL
+    // =========================
+
+    private static class StatusBadgeCell extends TableCell<Service, String> {
+
+        @Override
+        protected void updateItem(String status, boolean empty) {
+
+            super.updateItem(status, empty);
+
+            if (empty || status == null || status.trim().isEmpty()) {
+                setGraphic(null);
+                setText(null);
+                return;
+            }
+
+            String normalized = status.trim().toLowerCase(Locale.ROOT);
+            String label = STATUS_LABELS.getOrDefault(normalized, status).toUpperCase(Locale.ROOT);
+
+            Label badge = new Label(label);
+            badge.getStyleClass().add("status-badge");
+
+            Circle dot = new Circle(4);
+
+            if (normalized.equals(ServiceService.STATUS_WAITING)) {
+                badge.getStyleClass().add("badge-waiting");
+                dot.getStyleClass().add("dot-waiting");
+            } else if (normalized.equals(ServiceService.STATUS_IN_PROGRESS)) {
+                badge.getStyleClass().add("badge-progress");
+                dot.getStyleClass().add("dot-progress");
+            } else if (normalized.equals(ServiceService.STATUS_COMPLETED)) {
+                badge.getStyleClass().add("badge-completed");
+                dot.getStyleClass().add("dot-completed");
+            }
+
+            badge.setGraphic(dot);
+            badge.setContentDisplay(ContentDisplay.LEFT);
+            badge.setGraphicTextGap(6);
+
+            setText(null);
+            setGraphic(badge);
+            setAlignment(Pos.CENTER);
+
+        }
 
     }
 

@@ -2,117 +2,217 @@
 
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.layout.VBox?>
 
-<BorderPane xmlns="http://javafx.com/javafx/17"
-            xmlns:fx="http://javafx.com/fxml/1"
-            fx:controller="controller.ServiceController">
-
-    <top>
-        <Label text="Manajemen Service Laptop"
-               style="-fx-font-size:20px; -fx-font-weight:bold;"
-               BorderPane.alignment="CENTER"/>
-    </top>
+<BorderPane prefHeight="800.0" prefWidth="1400.0" styleClass="page-root" stylesheets="@../assets/style.css" xmlns="http://javafx.com/javafx/9.0.4" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ServiceController">
 
     <center>
 
-        <VBox spacing="15">
+                <VBox spacing="16" styleClass="content">
 
-            <padding>
-                <Insets top="15" right="15" bottom="15" left="15"/>
-            </padding>
+                    <padding>
+                        <Insets bottom="20" left="20" right="20" top="20" />
+                    </padding>
 
-            <GridPane hgap="10" vgap="10">
+                    <!-- ========================= -->
+                    <!-- HERO BANNER -->
+                    <!-- ========================= -->
 
-                <Label text="ID Service" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
-                <TextField fx:id="txtId"
-                           promptText="Masukkan ID Service"
-                           GridPane.rowIndex="0"
-                           GridPane.columnIndex="1"/>
+                    <VBox spacing="18" styleClass="hero-banner">
 
-                <Label text="ID Laptop" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
-                <TextField fx:id="txtLaptopId"
-                           promptText="Masukkan ID Laptop"
-                           GridPane.rowIndex="1"
-                           GridPane.columnIndex="1"/>
+                        <HBox alignment="CENTER_LEFT" spacing="20">
 
-                <Label text="Tanggal Masuk" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
-                <TextField fx:id="txtTanggalMasuk"
-                           promptText="yyyy-mm-dd"
-                           GridPane.rowIndex="2"
-                           GridPane.columnIndex="1"/>
+                            <VBox spacing="8" HBox.hgrow="ALWAYS">
+                                <HBox alignment="CENTER_LEFT" spacing="8">
+                                    <ImageView fitHeight="22" fitWidth="22" preserveRatio="true">
+                                        <image>
+                                            <Image url="@../assets/icons/service.png" />
+                                        </image>
+                                    </ImageView>
+                                    <Label styleClass="hero-title" text="Kelola Data Service" />
+                                </HBox>
+                                <Label styleClass="hero-desc" text="Monitor progres perbaikan perangkat pelanggan, update status servis, dan catat rincian biaya secara sistematis." />
+                            </VBox>
 
-                <Label text="Status" GridPane.rowIndex="3" GridPane.columnIndex="0"/>
-                <TextField fx:id="txtStatus"
-                           promptText="Status Service"
-                           GridPane.rowIndex="3"
-                           GridPane.columnIndex="1"/>
+                            <HBox spacing="12">
 
-                <Label text="Biaya" GridPane.rowIndex="4" GridPane.columnIndex="0"/>
-                <TextField fx:id="txtBiaya"
-                           promptText="Biaya Service"
-                           GridPane.rowIndex="4"
-                           GridPane.columnIndex="1"/>
+                                <VBox spacing="4" styleClass="hero-stat-chip, hero-stat-chip-neutral">
+                                    <Label styleClass="hero-stat-value" fx:id="lblStatSemua" text="0" />
+                                    <Label styleClass="hero-stat-label" text="SEMUA" />
+                                </VBox>
 
-            </GridPane>
+                                <VBox spacing="4" styleClass="hero-stat-chip, hero-stat-chip-orange">
+                                    <Label styleClass="hero-stat-value" fx:id="lblStatMenunggu" text="0" />
+                                    <Label styleClass="hero-stat-label" text="MENUNGGU" />
+                                </VBox>
 
-            <HBox spacing="10">
+                                <VBox spacing="4" styleClass="hero-stat-chip, hero-stat-chip-blue">
+                                    <Label styleClass="hero-stat-value" fx:id="lblStatDalamProses" text="0" />
+                                    <Label styleClass="hero-stat-label" text="DALAM PROSES" />
+                                </VBox>
 
-                <Button text="Tambah"
-                        onAction="#addService"/>
+                                <VBox spacing="4" styleClass="hero-stat-chip, hero-stat-chip-green">
+                                    <Label styleClass="hero-stat-value" fx:id="lblStatSelesai" text="0" />
+                                    <Label styleClass="hero-stat-label" text="SELESAI" />
+                                </VBox>
 
-                <Button text="Ubah"
-                        onAction="#updateService"/>
+                            </HBox>
 
-                <Button text="Hapus"
-                        onAction="#deleteService"/>
+                        </HBox>
 
-                <Button text="Clear"
-                        onAction="#clearForm"/>
+                    </VBox>
 
-            </HBox>
+                    <!-- ========================= -->
+                    <!-- FORM SERVICE -->
+                    <!-- ========================= -->
 
-            <TableView fx:id="serviceTable" prefHeight="350">
+                    <HBox alignment="CENTER_LEFT" spacing="10">
+                        <Label styleClass="section-icon-badge" text="📝" />
+                        <Label styleClass="section-title" text="Formulir Service" />
+                    </HBox>
 
-                <columns>
+                    <VBox spacing="16" styleClass="form-card">
 
-                    <TableColumn fx:id="colId"
-                                 text="ID Service"
-                                 prefWidth="120"/>
+                        <GridPane hgap="20" vgap="16">
 
-                    <TableColumn fx:id="colLaptopId"
-                                 text="ID Laptop"
-                                 prefWidth="120"/>
+                            <columnConstraints>
+                                <ColumnConstraints hgrow="ALWAYS" percentWidth="33.3" />
+                                <ColumnConstraints hgrow="ALWAYS" percentWidth="33.3" />
+                                <ColumnConstraints hgrow="ALWAYS" percentWidth="33.3" />
+                            </columnConstraints>
 
-                    <TableColumn fx:id="colTanggalMasuk"
-                                 text="Tanggal Masuk"
-                                 prefWidth="150"/>
+                            <rowConstraints>
+                                <RowConstraints />
+                                <RowConstraints />
+                            </rowConstraints>
 
-                    <TableColumn fx:id="colStatus"
-                                 text="Status"
-                                 prefWidth="180"/>
+                            <VBox spacing="6" GridPane.columnIndex="0" GridPane.rowIndex="0">
+                                <Label styleClass="form-label-caption" text="ID SERVICE" />
+                                <TextField fx:id="txtId" promptText="Masukkan ID Service" />
+                            </VBox>
 
-                    <TableColumn fx:id="colBiaya"
-                                 text="Biaya"
-                                 prefWidth="120"/>
+                            <VBox spacing="6" GridPane.columnIndex="1" GridPane.rowIndex="0">
+                                <Label styleClass="form-label-caption" text="ID LAPTOP" />
+                                <TextField fx:id="txtLaptopId" promptText="Masukkan ID Laptop" />
+                            </VBox>
 
-                </columns>
+                            <VBox spacing="6" GridPane.columnIndex="2" GridPane.rowIndex="0">
+                                <Label styleClass="form-label-caption" text="TANGGAL MASUK" />
+                                <DatePicker fx:id="dateTanggalMasuk" editable="false" maxWidth="Infinity" promptText="Pilih tanggal" />
+                            </VBox>
 
-            </TableView>
+                            <VBox spacing="6" GridPane.columnIndex="0" GridPane.rowIndex="1">
+                                <Label styleClass="form-label-caption" text="STATUS PERBAIKAN" />
+                                <ComboBox fx:id="cmbStatus" maxWidth="Infinity" promptText="Pilih status" />
+                            </VBox>
 
-        </VBox>
+                            <VBox spacing="6" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                <Label styleClass="form-label-caption" text="BIAYA SERVICE (IDR)" />
+                                <HBox styleClass="rp-input" alignment="CENTER_LEFT">
+                                    <Label styleClass="rp-prefix" text="Rp" />
+                                    <TextField fx:id="txtBiaya" promptText="0" styleClass="rp-field" HBox.hgrow="ALWAYS" />
+                                </HBox>
+                            </VBox>
+
+                            <VBox spacing="6" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                                <Label styleClass="form-label-caption" text="CATATAN TEKNIS" />
+                                <TextField fx:id="txtKeterangan" promptText="Rincian kerusakan..." />
+                            </VBox>
+
+                        </GridPane>
+
+                        <Separator />
+
+                        <HBox alignment="CENTER_LEFT" spacing="10" styleClass="action-bar">
+
+                            <Button onAction="#addService" styleClass="button-primary" text="➕ Tambah" />
+
+                            <Button onAction="#updateService" styleClass="button-outline-primary" text="✎ Ubah" />
+
+                            <Button onAction="#deleteService" styleClass="button-danger" text="🗑 Hapus" />
+
+                            <Region HBox.hgrow="ALWAYS" />
+
+                            <Button onAction="#clearForm" styleClass="button-outline" text="↺ Clear" />
+
+                        </HBox>
+
+                    </VBox>
+
+                    <!-- ========================= -->
+                    <!-- DAFTAR SERVICE -->
+                    <!-- ========================= -->
+
+                    <HBox alignment="CENTER_LEFT" spacing="10">
+
+                        <HBox alignment="CENTER_LEFT" spacing="10">
+                            <Label styleClass="section-icon-badge" text="📄" />
+                            <Label styleClass="section-title" text="Daftar Service" />
+                        </HBox>
+
+                        <Region HBox.hgrow="ALWAYS" />
+
+                        <HBox alignment="CENTER_LEFT" spacing="4" styleClass="filter-tab-bar">
+
+                            <Button fx:id="btnFilterAll" onAction="#filterAll" styleClass="filter-tab" text="Semua" />
+
+                            <Button fx:id="btnFilterWaiting" onAction="#filterWaiting" styleClass="filter-tab" text="Menunggu" />
+
+                            <Button fx:id="btnFilterInProgress" onAction="#filterInProgress" styleClass="filter-tab" text="Dalam Proses" />
+
+                            <Button fx:id="btnFilterCompleted" onAction="#filterCompleted" styleClass="filter-tab" text="Selesai" />
+
+                        </HBox>
+
+                    </HBox>
+
+                    <VBox styleClass="table-card" VBox.vgrow="ALWAYS">
+
+                        <TableView fx:id="serviceTable" VBox.vgrow="ALWAYS">
+
+                            <columns>
+
+                                <TableColumn fx:id="colId" prefWidth="120" text="ID SERVICE" />
+
+                                <TableColumn fx:id="colLaptopId" prefWidth="120" text="ID LAPTOP" />
+
+                                <TableColumn fx:id="colTanggalMasuk" prefWidth="160" text="TANGGAL MASUK" />
+
+                                <TableColumn fx:id="colStatus" prefWidth="170" text="STATUS" />
+
+                                <TableColumn fx:id="colBiaya" prefWidth="150" text="BIAYA" />
+
+                                <TableColumn fx:id="colKeterangan" prefWidth="320" text="KETERANGAN" />
+
+                            </columns>
+
+                        </TableView>
+
+                        <HBox alignment="CENTER_LEFT" spacing="10" styleClass="pagination-bar">
+
+                            <Label fx:id="lblPaginationInfo" styleClass="pagination-info" text="Menampilkan 0 entri" />
+
+                        </HBox>
+
+                    </VBox>
+
+                </VBox>
 
     </center>
-
-    <padding>
-        <Insets top="15" right="15" bottom="15" left="15"/>
-    </padding>
 
 </BorderPane>

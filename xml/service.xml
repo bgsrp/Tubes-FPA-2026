@@ -1,0 +1,2453 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<services>
+
+
+    <service>
+
+
+        <id>1</id>
+
+
+        <laptopId>14</laptopId>
+
+
+        <tanggalMasuk>2026-01-01</tanggalMasuk>
+
+
+        <status>completed</status>
+
+
+        <biaya>945000.0</biaya>
+
+
+        <keterangan>Garansi servis 30 hari</keterangan>
+
+
+    </service>
+
+
+    <service>
+
+
+        <id>2</id>
+
+
+        <laptopId>51</laptopId>
+
+
+        <tanggalMasuk>2026-01-04</tanggalMasuk>
+
+
+        <status>waiting</status>
+
+
+        <biaya>1435000.0</biaya>
+
+
+        <keterangan>Testing setelah perbaikan</keterangan>
+
+
+    </service>
+
+
+    <service>
+
+
+        <id>3</id>
+
+
+        <laptopId>45</laptopId>
+
+
+        <tanggalMasuk>2026-01-08</tanggalMasuk>
+
+
+        <status>completed</status>
+
+
+        <biaya>1160000.0</biaya>
+
+
+        <keterangan>Sudah dicek, menunggu sparepart</keterangan>
+
+
+    </service>
+
+
+    <service>
+
+
+        <id>4</id>
+
+
+        <laptopId>22</laptopId>
+
+
+        <tanggalMasuk>2026-01-12</tanggalMasuk>
+
+
+        <status>completed</status>
+
+
+        <biaya>1030000.0</biaya>
+
+
+        <keterangan>Sudah dicek, menunggu sparepart</keterangan>
+
+
+    </service>
+
+
+    <service>
+
+
+        <id>5</id>
+
+
+        <laptopId>74</laptopId>
+
+
+        <tanggalMasuk>2026-01-15</tanggalMasuk>
+
+
+        <status>completed</status>
+
+
+        <biaya>515000.0</biaya>
+
+
+        <keterangan>Sudah dicek, menunggu sparepart</keterangan>
+
+
+    </service>
+
+
+    <service>
+
+
+        <id>6</id>
+
+
+        <laptopId>47</laptopId>
+
+
+        <tanggalMasuk>2026-01-19</tanggalMasuk>
+
+
+        <status>completed</status>
+
+
+        <biaya>1370000.0</biaya>
+
+
+        <keterangan>Testing setelah perbaikan</keterangan>
+
+
+    </service>
+
+
+    <service>
+
+
+        <id>7</id>
+
+
+        <laptopId>41</laptopId>
+
+
+        <tanggalMasuk>2026-01-23</tanggalMasuk>
+
+
+        <status>waiting</status>
+
+
+        <biaya>760000.0</biaya>
+
+
+        <keterangan>Upgrade komponen atas permintaan customer</keterangan>
+
+
+    </service>
+
+
+    <service>
+
+
+        <id>8</id>
+
+
+        <laptopId>25</laptopId>
+
+
+        <tanggalMasuk>2026-01-26</tanggalMasuk>
+
+
+        <status>in progress</status>
+
+
+        <biaya>160000.0</biaya>
+
+
+        <keterangan>Menunggu konfirmasi customer</keterangan>
+
+
+    </service>
+
+
+    <service>
+
+
+        <id>9</id>
+
+
+        <laptopId>6</laptopId>
+
+
+        <tanggalMasuk>2026-01-30</tanggalMasuk>
+
+
+        <status>in progress</status>
+
+
+        <biaya>600000.0</biaya>
+
+
+        <keterangan>Diagnosa awal selesai, lanjut perbaikan</keterangan>
+
+
+    </service>
+
+
+    <service>
+
+
+        <id>10</id>
+
+
+        <laptopId>69</laptopId>
+
+
+        <tanggalMasuk>2026-02-03</tanggalMasuk>
+
+
+        <status>completed</status>
+
+
+        <biaya>1105000.0</biaya>
+
+
+        <keterangan>Testing setelah perbaikan</keterangan>
+
+
+    </service>
+
+
+    <service>
+
+
+        <id>11</id>
+
+
+        <laptopId>15</laptopId>
+
+
+        <tanggalMasuk>2026-02-06</tanggalMasuk>
+
+
+        <status>in progress</status>
+
+
+        <biaya>940000.0</biaya>
+
+
+        <keterangan>Penggantian komponen sedang berlangsung</keterangan>
+
+
+    </service>
+
+
+    <service>
+
+
+        <id>12</id>
+
+
+        <laptopId>3</laptopId>
+
+
+        <tanggalMasuk>2026-02-10</tanggalMasuk>
+
+
+        <status>completed</status>
+
+
+        <biaya>265000.0</biaya>
+
+
+        <keterangan>Pembersihan hardware dan thermal paste</keterangan>
+
+
+    </service>
+
+
+    <service>
+
+
+        <id>13</id>
+
+
+        <laptopId>95</laptopId>
+
+
+        <tanggalMasuk>2026-02-14</tanggalMasuk>
+
+
+        <status>completed</status>
+
+
+        <biaya>790000.0</biaya>
+
+
+        <keterangan>Diagnosa awal selesai, lanjut perbaikan</keterangan>
+
+
+    </service>
+
+
+    <service>
+
+
+        <id>14</id>
+
+
+        <laptopId>60</laptopId>
+
+
+        <tanggalMasuk>2026-02-17</tanggalMasuk>
+
+
+        <status>completed</status>
+
+
+        <biaya>945000.0</biaya>
+
+
+        <keterangan>Sudah dicek, menunggu sparepart</keterangan>
+
+
+    </service>
+
+
+    <service>
+
+
+        <id>15</id>
+
+
+        <laptopId>33</laptopId>
+
+
+        <tanggalMasuk>2026-02-21</tanggalMasuk>
+
+
+        <status>completed</status>
+
+
+        <biaya>980000.0</biaya>
+
+
+        <keterangan>Sudah dicek, menunggu sparepart</keterangan>
+
+
+    </service>
+
+
+    <service>
+
+
+        <id>16</id>
+
+
+        <laptopId>90</laptopId>
+
+
+        <tanggalMasuk>2026-02-25</tanggalMasuk>
+
+
+        <status>in progress</status>
+
+
+        <biaya>1205000.0</biaya>
+
+
+        <keterangan>Pembersihan hardware dan thermal paste</keterangan>
+
+
+    </service>
+
+
+    <service>
+
+
+        <id>17</id>
+
+
+        <laptopId>65</laptopId>
+
+
+        <tanggalMasuk>2026-02-28</tanggalMasuk>
+
+
+        <status>completed</status>
+
+
+        <biaya>1310000.0</biaya>
+
+
+        <keterangan>Diagnosa awal selesai, lanjut perbaikan</keterangan>
+
+
+    </service>
+
+
+    <service>
+
+
+        <id>18</id>
+
+
+        <laptopId>52</laptopId>
+
+
+        <tanggalMasuk>2026-03-04</tanggalMasuk>
+
+
+        <status>completed</status>
+
+
+        <biaya>1295000.0</biaya>
+
+
+        <keterangan>Sudah selesai dan siap diambil</keterangan>
+
+
+    </service>
+
+
+    <service>
+
+
+        <id>19</id>
+
+
+        <laptopId>2</laptopId>
+
+
+        <tanggalMasuk>2026-03-08</tanggalMasuk>
+
+
+        <status>completed</status>
+
+
+        <biaya>740000.0</biaya>
+
+
+        <keterangan>Testing setelah perbaikan</keterangan>
+
+
+    </service>
+
+
+    <service>
+
+
+        <id>20</id>
+
+
+        <laptopId>85</laptopId>
+
+
+        <tanggalMasuk>2026-03-11</tanggalMasuk>
+
+
+        <status>completed</status>
+
+
+        <biaya>1195000.0</biaya>
+
+
+        <keterangan>Garansi servis 30 hari</keterangan>
+
+
+    </service>
+
+
+    <service>
+
+
+        <id>21</id>
+
+
+        <laptopId>37</laptopId>
+
+
+        <tanggalMasuk>2026-03-15</tanggalMasuk>
+
+
+        <status>waiting</status>
+
+
+        <biaya>810000.0</biaya>
+
+
+        <keterangan>Diagnosa awal selesai, lanjut perbaikan</keterangan>
+
+
+    </service>
+
+
+    <service>
+
+
+        <id>22</id>
+
+
+        <laptopId>85</laptopId>
+
+
+        <tanggalMasuk>2026-03-19</tanggalMasuk>
+
+
+        <status>completed</status>
+
+
+        <biaya>980000.0</biaya>
+
+
+        <keterangan>Testing setelah perbaikan</keterangan>
+
+
+    </service>
+
+
+    <service>
+
+
+        <id>23</id>
+
+
+        <laptopId>34</laptopId>
+
+
+        <tanggalMasuk>2026-03-22</tanggalMasuk>
+
+
+        <status>completed</status>
+
+
+        <biaya>980000.0</biaya>
+
+
+        <keterangan>Sudah selesai dan siap diambil</keterangan>
+
+
+    </service>
+
+
+    <service>
+
+
+        <id>24</id>
+
+
+        <laptopId>50</laptopId>
+
+
+        <tanggalMasuk>2026-03-26</tanggalMasuk>
+
+
+        <status>completed</status>
+
+
+        <biaya>1445000.0</biaya>
+
+
+        <keterangan>Upgrade komponen atas permintaan customer</keterangan>
+
+
+    </service>
+
+
+    <service>
+
+
+        <id>25</id>
+
+
+        <laptopId>94</laptopId>
+
+
+        <tanggalMasuk>2026-03-30</tanggalMasuk>
+
+
+        <status>in progress</status>
+
+
+        <biaya>1155000.0</biaya>
+
+
+        <keterangan>Diagnosa awal selesai, lanjut perbaikan</keterangan>
+
+
+    </service>
+
+
+    <service>
+
+
+        <id>26</id>
+
+
+        <laptopId>36</laptopId>
+
+
+        <tanggalMasuk>2026-04-02</tanggalMasuk>
+
+
+        <status>completed</status>
+
+
+        <biaya>290000.0</biaya>
+
+
+        <keterangan>Garansi servis 30 hari</keterangan>
+
+
+    </service>
+
+
+    <service>
+
+
+        <id>27</id>
+
+
+        <laptopId>15</laptopId>
+
+
+        <tanggalMasuk>2026-04-06</tanggalMasuk>
+
+
+        <status>in progress</status>
+
+
+        <biaya>355000.0</biaya>
+
+
+        <keterangan>Sudah dicek, menunggu sparepart</keterangan>
+
+
+    </service>
+
+
+    <service>
+
+
+        <id>28</id>
+
+
+        <laptopId>31</laptopId>
+
+
+        <tanggalMasuk>2026-04-10</tanggalMasuk>
+
+
+        <status>completed</status>
+
+
+        <biaya>1185000.0</biaya>
+
+
+        <keterangan>Sudah selesai dan siap diambil</keterangan>
+
+
+    </service>
+
+
+    <service>
+
+
+        <id>29</id>
+
+
+        <laptopId>37</laptopId>
+
+
+        <tanggalMasuk>2026-04-13</tanggalMasuk>
+
+
+        <status>waiting</status>
+
+
+        <biaya>240000.0</biaya>
+
+
+        <keterangan>Upgrade komponen atas permintaan customer</keterangan>
+
+
+    </service>
+
+
+    <service>
+
+
+        <id>30</id>
+
+
+        <laptopId>80</laptopId>
+
+
+        <tanggalMasuk>2026-04-17</tanggalMasuk>
+
+
+        <status>in progress</status>
+
+
+        <biaya>70000.0</biaya>
+
+
+        <keterangan>Proses instal ulang sistem operasi</keterangan>
+
+
+    </service>
+
+
+    <service>
+
+
+        <id>31</id>
+
+
+        <laptopId>8</laptopId>
+
+
+        <tanggalMasuk>2026-04-21</tanggalMasuk>
+
+
+        <status>in progress</status>
+
+
+        <biaya>625000.0</biaya>
+
+
+        <keterangan>Upgrade komponen atas permintaan customer</keterangan>
+
+
+    </service>
+
+
+    <service>
+
+
+        <id>32</id>
+
+
+        <laptopId>54</laptopId>
+
+
+        <tanggalMasuk>2026-04-24</tanggalMasuk>
+
+
+        <status>completed</status>
+
+
+        <biaya>125000.0</biaya>
+
+
+        <keterangan>Proses instal ulang sistem operasi</keterangan>
+
+
+    </service>
+
+
+    <service>
+
+
+        <id>33</id>
+
+
+        <laptopId>78</laptopId>
+
+
+        <tanggalMasuk>2026-04-28</tanggalMasuk>
+
+
+        <status>in progress</status>
+
+
+        <biaya>630000.0</biaya>
+
+
+        <keterangan>Testing setelah perbaikan</keterangan>
+
+
+    </service>
+
+
+    <service>
+
+
+        <id>34</id>
+
+
+        <laptopId>35</laptopId>
+
+
+        <tanggalMasuk>2026-05-02</tanggalMasuk>
+
+
+        <status>completed</status>
+
+
+        <biaya>225000.0</biaya>
+
+
+        <keterangan>Proses instal ulang sistem operasi</keterangan>
+
+
+    </service>
+
+
+    <service>
+
+
+        <id>35</id>
+
+
+        <laptopId>28</laptopId>
+
+
+        <tanggalMasuk>2026-05-06</tanggalMasuk>
+
+
+        <status>completed</status>
+
+
+        <biaya>1370000.0</biaya>
+
+
+        <keterangan>Diagnosa awal selesai, lanjut perbaikan</keterangan>
+
+
+    </service>
+
+
+    <service>
+
+
+        <id>36</id>
+
+
+        <laptopId>57</laptopId>
+
+
+        <tanggalMasuk>2026-05-09</tanggalMasuk>
+
+
+        <status>in progress</status>
+
+
+        <biaya>1165000.0</biaya>
+
+
+        <keterangan>Sudah dicek, menunggu sparepart</keterangan>
+
+
+    </service>
+
+
+    <service>
+
+
+        <id>37</id>
+
+
+        <laptopId>27</laptopId>
+
+
+        <tanggalMasuk>2026-05-13</tanggalMasuk>
+
+
+        <status>in progress</status>
+
+
+        <biaya>120000.0</biaya>
+
+
+        <keterangan>Upgrade komponen atas permintaan customer</keterangan>
+
+
+    </service>
+
+
+    <service>
+
+
+        <id>38</id>
+
+
+        <laptopId>81</laptopId>
+
+
+        <tanggalMasuk>2026-05-17</tanggalMasuk>
+
+
+        <status>completed</status>
+
+
+        <biaya>1355000.0</biaya>
+
+
+        <keterangan>Penggantian komponen sedang berlangsung</keterangan>
+
+
+    </service>
+
+
+    <service>
+
+
+        <id>39</id>
+
+
+        <laptopId>47</laptopId>
+
+
+        <tanggalMasuk>2026-05-20</tanggalMasuk>
+
+
+        <status>waiting</status>
+
+
+        <biaya>110000.0</biaya>
+
+
+        <keterangan>Upgrade komponen atas permintaan customer</keterangan>
+
+
+    </service>
+
+
+    <service>
+
+
+        <id>40</id>
+
+
+        <laptopId>4</laptopId>
+
+
+        <tanggalMasuk>2026-05-24</tanggalMasuk>
+
+
+        <status>waiting</status>
+
+
+        <biaya>435000.0</biaya>
+
+
+        <keterangan>Sudah selesai dan siap diambil</keterangan>
+
+
+    </service>
+
+
+    <service>
+
+
+        <id>41</id>
+
+
+        <laptopId>74</laptopId>
+
+
+        <tanggalMasuk>2026-05-28</tanggalMasuk>
+
+
+        <status>completed</status>
+
+
+        <biaya>345000.0</biaya>
+
+
+        <keterangan>Penggantian komponen sedang berlangsung</keterangan>
+
+
+    </service>
+
+
+    <service>
+
+
+        <id>42</id>
+
+
+        <laptopId>22</laptopId>
+
+
+        <tanggalMasuk>2026-05-31</tanggalMasuk>
+
+
+        <status>waiting</status>
+
+
+        <biaya>445000.0</biaya>
+
+
+        <keterangan>Upgrade komponen atas permintaan customer</keterangan>
+
+
+    </service>
+
+
+    <service>
+
+
+        <id>43</id>
+
+
+        <laptopId>19</laptopId>
+
+
+        <tanggalMasuk>2026-06-04</tanggalMasuk>
+
+
+        <status>completed</status>
+
+
+        <biaya>635000.0</biaya>
+
+
+        <keterangan>Sudah dicek, menunggu sparepart</keterangan>
+
+
+    </service>
+
+
+    <service>
+
+
+        <id>44</id>
+
+
+        <laptopId>49</laptopId>
+
+
+        <tanggalMasuk>2026-06-08</tanggalMasuk>
+
+
+        <status>completed</status>
+
+
+        <biaya>430000.0</biaya>
+
+
+        <keterangan>Garansi servis 30 hari</keterangan>
+
+
+    </service>
+
+
+    <service>
+
+
+        <id>45</id>
+
+
+        <laptopId>99</laptopId>
+
+
+        <tanggalMasuk>2026-06-11</tanggalMasuk>
+
+
+        <status>completed</status>
+
+
+        <biaya>1260000.0</biaya>
+
+
+        <keterangan>Pembersihan hardware dan thermal paste</keterangan>
+
+
+    </service>
+
+
+    <service>
+
+
+        <id>46</id>
+
+
+        <laptopId>13</laptopId>
+
+
+        <tanggalMasuk>2026-06-15</tanggalMasuk>
+
+
+        <status>completed</status>
+
+
+        <biaya>415000.0</biaya>
+
+
+        <keterangan>Garansi servis 30 hari</keterangan>
+
+
+    </service>
+
+
+    <service>
+
+
+        <id>47</id>
+
+
+        <laptopId>66</laptopId>
+
+
+        <tanggalMasuk>2026-06-19</tanggalMasuk>
+
+
+        <status>completed</status>
+
+
+        <biaya>1230000.0</biaya>
+
+
+        <keterangan>Sudah selesai dan siap diambil</keterangan>
+
+
+    </service>
+
+
+    <service>
+
+
+        <id>48</id>
+
+
+        <laptopId>100</laptopId>
+
+
+        <tanggalMasuk>2026-06-22</tanggalMasuk>
+
+
+        <status>waiting</status>
+
+
+        <biaya>790000.0</biaya>
+
+
+        <keterangan>Pembersihan hardware dan thermal paste</keterangan>
+
+
+    </service>
+
+
+    <service>
+
+
+        <id>49</id>
+
+
+        <laptopId>44</laptopId>
+
+
+        <tanggalMasuk>2026-06-26</tanggalMasuk>
+
+
+        <status>completed</status>
+
+
+        <biaya>1015000.0</biaya>
+
+
+        <keterangan>Sudah dicek, menunggu sparepart</keterangan>
+
+
+    </service>
+
+
+    <service>
+
+
+        <id>50</id>
+
+
+        <laptopId>2</laptopId>
+
+
+        <tanggalMasuk>2026-06-30</tanggalMasuk>
+
+
+        <status>completed</status>
+
+
+        <biaya>355000.0</biaya>
+
+
+        <keterangan>Proses instal ulang sistem operasi</keterangan>
+
+
+    </service>
+
+
+    <service>
+
+
+        <id>51</id>
+
+
+        <laptopId>80</laptopId>
+
+
+        <tanggalMasuk>2026-07-03</tanggalMasuk>
+
+
+        <status>in progress</status>
+
+
+        <biaya>1490000.0</biaya>
+
+
+        <keterangan>Proses instal ulang sistem operasi</keterangan>
+
+
+    </service>
+
+
+    <service>
+
+
+        <id>52</id>
+
+
+        <laptopId>9</laptopId>
+
+
+        <tanggalMasuk>2026-07-07</tanggalMasuk>
+
+
+        <status>completed</status>
+
+
+        <biaya>410000.0</biaya>
+
+
+        <keterangan>Sudah dicek, menunggu sparepart</keterangan>
+
+
+    </service>
+
+
+    <service>
+
+
+        <id>53</id>
+
+
+        <laptopId>56</laptopId>
+
+
+        <tanggalMasuk>2026-07-11</tanggalMasuk>
+
+
+        <status>waiting</status>
+
+
+        <biaya>150000.0</biaya>
+
+
+        <keterangan>Penggantian komponen sedang berlangsung</keterangan>
+
+
+    </service>
+
+
+    <service>
+
+
+        <id>54</id>
+
+
+        <laptopId>38</laptopId>
+
+
+        <tanggalMasuk>2026-07-14</tanggalMasuk>
+
+
+        <status>completed</status>
+
+
+        <biaya>635000.0</biaya>
+
+
+        <keterangan>Proses instal ulang sistem operasi</keterangan>
+
+
+    </service>
+
+
+    <service>
+
+
+        <id>55</id>
+
+
+        <laptopId>98</laptopId>
+
+
+        <tanggalMasuk>2026-07-18</tanggalMasuk>
+
+
+        <status>in progress</status>
+
+
+        <biaya>1035000.0</biaya>
+
+
+        <keterangan>Proses instal ulang sistem operasi</keterangan>
+
+
+    </service>
+
+
+    <service>
+
+
+        <id>56</id>
+
+
+        <laptopId>88</laptopId>
+
+
+        <tanggalMasuk>2026-07-22</tanggalMasuk>
+
+
+        <status>waiting</status>
+
+
+        <biaya>200000.0</biaya>
+
+
+        <keterangan>Upgrade komponen atas permintaan customer</keterangan>
+
+
+    </service>
+
+
+    <service>
+
+
+        <id>57</id>
+
+
+        <laptopId>1</laptopId>
+
+
+        <tanggalMasuk>2026-07-25</tanggalMasuk>
+
+
+        <status>in progress</status>
+
+
+        <biaya>470000.0</biaya>
+
+
+        <keterangan>Garansi servis 30 hari</keterangan>
+
+
+    </service>
+
+
+    <service>
+
+
+        <id>58</id>
+
+
+        <laptopId>25</laptopId>
+
+
+        <tanggalMasuk>2026-07-29</tanggalMasuk>
+
+
+        <status>completed</status>
+
+
+        <biaya>560000.0</biaya>
+
+
+        <keterangan>Garansi servis 30 hari</keterangan>
+
+
+    </service>
+
+
+    <service>
+
+
+        <id>59</id>
+
+
+        <laptopId>63</laptopId>
+
+
+        <tanggalMasuk>2026-08-02</tanggalMasuk>
+
+
+        <status>waiting</status>
+
+
+        <biaya>1395000.0</biaya>
+
+
+        <keterangan>Upgrade komponen atas permintaan customer</keterangan>
+
+
+    </service>
+
+
+    <service>
+
+
+        <id>60</id>
+
+
+        <laptopId>22</laptopId>
+
+
+        <tanggalMasuk>2026-08-05</tanggalMasuk>
+
+
+        <status>completed</status>
+
+
+        <biaya>1065000.0</biaya>
+
+
+        <keterangan>Sudah dicek, menunggu sparepart</keterangan>
+
+
+    </service>
+
+
+    <service>
+
+
+        <id>61</id>
+
+
+        <laptopId>5</laptopId>
+
+
+        <tanggalMasuk>2026-08-09</tanggalMasuk>
+
+
+        <status>in progress</status>
+
+
+        <biaya>1130000.0</biaya>
+
+
+        <keterangan>Testing setelah perbaikan</keterangan>
+
+
+    </service>
+
+
+    <service>
+
+
+        <id>62</id>
+
+
+        <laptopId>15</laptopId>
+
+
+        <tanggalMasuk>2026-08-13</tanggalMasuk>
+
+
+        <status>waiting</status>
+
+
+        <biaya>1230000.0</biaya>
+
+
+        <keterangan>Diagnosa awal selesai, lanjut perbaikan</keterangan>
+
+
+    </service>
+
+
+    <service>
+
+
+        <id>63</id>
+
+
+        <laptopId>53</laptopId>
+
+
+        <tanggalMasuk>2026-08-16</tanggalMasuk>
+
+
+        <status>completed</status>
+
+
+        <biaya>815000.0</biaya>
+
+
+        <keterangan>Pembersihan hardware dan thermal paste</keterangan>
+
+
+    </service>
+
+
+    <service>
+
+
+        <id>64</id>
+
+
+        <laptopId>55</laptopId>
+
+
+        <tanggalMasuk>2026-08-20</tanggalMasuk>
+
+
+        <status>completed</status>
+
+
+        <biaya>205000.0</biaya>
+
+
+        <keterangan>Menunggu konfirmasi customer</keterangan>
+
+
+    </service>
+
+
+    <service>
+
+
+        <id>65</id>
+
+
+        <laptopId>43</laptopId>
+
+
+        <tanggalMasuk>2026-08-24</tanggalMasuk>
+
+
+        <status>completed</status>
+
+
+        <biaya>65000.0</biaya>
+
+
+        <keterangan>Menunggu konfirmasi customer</keterangan>
+
+
+    </service>
+
+
+    <service>
+
+
+        <id>66</id>
+
+
+        <laptopId>56</laptopId>
+
+
+        <tanggalMasuk>2026-08-27</tanggalMasuk>
+
+
+        <status>in progress</status>
+
+
+        <biaya>180000.0</biaya>
+
+
+        <keterangan>Diagnosa awal selesai, lanjut perbaikan</keterangan>
+
+
+    </service>
+
+
+    <service>
+
+
+        <id>67</id>
+
+
+        <laptopId>18</laptopId>
+
+
+        <tanggalMasuk>2026-08-31</tanggalMasuk>
+
+
+        <status>waiting</status>
+
+
+        <biaya>1495000.0</biaya>
+
+
+        <keterangan>Proses instal ulang sistem operasi</keterangan>
+
+
+    </service>
+
+
+    <service>
+
+
+        <id>68</id>
+
+
+        <laptopId>96</laptopId>
+
+
+        <tanggalMasuk>2026-09-04</tanggalMasuk>
+
+
+        <status>waiting</status>
+
+
+        <biaya>1080000.0</biaya>
+
+
+        <keterangan>Garansi servis 30 hari</keterangan>
+
+
+    </service>
+
+
+    <service>
+
+
+        <id>69</id>
+
+
+        <laptopId>7</laptopId>
+
+
+        <tanggalMasuk>2026-09-08</tanggalMasuk>
+
+
+        <status>in progress</status>
+
+
+        <biaya>610000.0</biaya>
+
+
+        <keterangan>Sudah selesai dan siap diambil</keterangan>
+
+
+    </service>
+
+
+    <service>
+
+
+        <id>70</id>
+
+
+        <laptopId>12</laptopId>
+
+
+        <tanggalMasuk>2026-09-11</tanggalMasuk>
+
+
+        <status>completed</status>
+
+
+        <biaya>105000.0</biaya>
+
+
+        <keterangan>Sudah selesai dan siap diambil</keterangan>
+
+
+    </service>
+
+
+    <service>
+
+
+        <id>71</id>
+
+
+        <laptopId>26</laptopId>
+
+
+        <tanggalMasuk>2026-09-15</tanggalMasuk>
+
+
+        <status>waiting</status>
+
+
+        <biaya>1340000.0</biaya>
+
+
+        <keterangan>Penggantian komponen sedang berlangsung</keterangan>
+
+
+    </service>
+
+
+    <service>
+
+
+        <id>72</id>
+
+
+        <laptopId>58</laptopId>
+
+
+        <tanggalMasuk>2026-09-19</tanggalMasuk>
+
+
+        <status>completed</status>
+
+
+        <biaya>615000.0</biaya>
+
+
+        <keterangan>Penggantian komponen sedang berlangsung</keterangan>
+
+
+    </service>
+
+
+    <service>
+
+
+        <id>73</id>
+
+
+        <laptopId>65</laptopId>
+
+
+        <tanggalMasuk>2026-09-22</tanggalMasuk>
+
+
+        <status>in progress</status>
+
+
+        <biaya>1265000.0</biaya>
+
+
+        <keterangan>Sudah selesai dan siap diambil</keterangan>
+
+
+    </service>
+
+
+    <service>
+
+
+        <id>74</id>
+
+
+        <laptopId>86</laptopId>
+
+
+        <tanggalMasuk>2026-09-26</tanggalMasuk>
+
+
+        <status>waiting</status>
+
+
+        <biaya>585000.0</biaya>
+
+
+        <keterangan>Proses instal ulang sistem operasi</keterangan>
+
+
+    </service>
+
+
+    <service>
+
+
+        <id>75</id>
+
+
+        <laptopId>48</laptopId>
+
+
+        <tanggalMasuk>2026-09-30</tanggalMasuk>
+
+
+        <status>completed</status>
+
+
+        <biaya>1385000.0</biaya>
+
+
+        <keterangan>Upgrade komponen atas permintaan customer</keterangan>
+
+
+    </service>
+
+
+    <service>
+
+
+        <id>76</id>
+
+
+        <laptopId>54</laptopId>
+
+
+        <tanggalMasuk>2026-10-03</tanggalMasuk>
+
+
+        <status>in progress</status>
+
+
+        <biaya>1220000.0</biaya>
+
+
+        <keterangan>Pembersihan hardware dan thermal paste</keterangan>
+
+
+    </service>
+
+
+    <service>
+
+
+        <id>77</id>
+
+
+        <laptopId>86</laptopId>
+
+
+        <tanggalMasuk>2026-10-07</tanggalMasuk>
+
+
+        <status>completed</status>
+
+
+        <biaya>1205000.0</biaya>
+
+
+        <keterangan>Diagnosa awal selesai, lanjut perbaikan</keterangan>
+
+
+    </service>
+
+
+    <service>
+
+
+        <id>78</id>
+
+
+        <laptopId>85</laptopId>
+
+
+        <tanggalMasuk>2026-10-11</tanggalMasuk>
+
+
+        <status>completed</status>
+
+
+        <biaya>1480000.0</biaya>
+
+
+        <keterangan>Testing setelah perbaikan</keterangan>
+
+
+    </service>
+
+
+    <service>
+
+
+        <id>79</id>
+
+
+        <laptopId>30</laptopId>
+
+
+        <tanggalMasuk>2026-10-14</tanggalMasuk>
+
+
+        <status>completed</status>
+
+
+        <biaya>1375000.0</biaya>
+
+
+        <keterangan>Garansi servis 30 hari</keterangan>
+
+
+    </service>
+
+
+    <service>
+
+
+        <id>80</id>
+
+
+        <laptopId>17</laptopId>
+
+
+        <tanggalMasuk>2026-10-18</tanggalMasuk>
+
+
+        <status>completed</status>
+
+
+        <biaya>205000.0</biaya>
+
+
+        <keterangan>Sudah dicek, menunggu sparepart</keterangan>
+
+
+    </service>
+
+
+    <service>
+
+
+        <id>81</id>
+
+
+        <laptopId>45</laptopId>
+
+
+        <tanggalMasuk>2026-10-22</tanggalMasuk>
+
+
+        <status>completed</status>
+
+
+        <biaya>505000.0</biaya>
+
+
+        <keterangan>Penggantian komponen sedang berlangsung</keterangan>
+
+
+    </service>
+
+
+    <service>
+
+
+        <id>82</id>
+
+
+        <laptopId>99</laptopId>
+
+
+        <tanggalMasuk>2026-10-25</tanggalMasuk>
+
+
+        <status>completed</status>
+
+
+        <biaya>185000.0</biaya>
+
+
+        <keterangan>Testing setelah perbaikan</keterangan>
+
+
+    </service>
+
+
+    <service>
+
+
+        <id>83</id>
+
+
+        <laptopId>58</laptopId>
+
+
+        <tanggalMasuk>2026-10-29</tanggalMasuk>
+
+
+        <status>waiting</status>
+
+
+        <biaya>315000.0</biaya>
+
+
+        <keterangan>Sudah selesai dan siap diambil</keterangan>
+
+
+    </service>
+
+
+    <service>
+
+
+        <id>84</id>
+
+
+        <laptopId>82</laptopId>
+
+
+        <tanggalMasuk>2026-11-02</tanggalMasuk>
+
+
+        <status>completed</status>
+
+
+        <biaya>1125000.0</biaya>
+
+
+        <keterangan>Penggantian komponen sedang berlangsung</keterangan>
+
+
+    </service>
+
+
+    <service>
+
+
+        <id>85</id>
+
+
+        <laptopId>42</laptopId>
+
+
+        <tanggalMasuk>2026-11-05</tanggalMasuk>
+
+
+        <status>completed</status>
+
+
+        <biaya>695000.0</biaya>
+
+
+        <keterangan>Penggantian komponen sedang berlangsung</keterangan>
+
+
+    </service>
+
+
+    <service>
+
+
+        <id>86</id>
+
+
+        <laptopId>68</laptopId>
+
+
+        <tanggalMasuk>2026-11-09</tanggalMasuk>
+
+
+        <status>completed</status>
+
+
+        <biaya>190000.0</biaya>
+
+
+        <keterangan>Sudah dicek, menunggu sparepart</keterangan>
+
+
+    </service>
+
+
+    <service>
+
+
+        <id>87</id>
+
+
+        <laptopId>48</laptopId>
+
+
+        <tanggalMasuk>2026-11-13</tanggalMasuk>
+
+
+        <status>in progress</status>
+
+
+        <biaya>635000.0</biaya>
+
+
+        <keterangan>Proses instal ulang sistem operasi</keterangan>
+
+
+    </service>
+
+
+    <service>
+
+
+        <id>88</id>
+
+
+        <laptopId>54</laptopId>
+
+
+        <tanggalMasuk>2026-11-16</tanggalMasuk>
+
+
+        <status>completed</status>
+
+
+        <biaya>170000.0</biaya>
+
+
+        <keterangan>Upgrade komponen atas permintaan customer</keterangan>
+
+
+    </service>
+
+
+    <service>
+
+
+        <id>89</id>
+
+
+        <laptopId>72</laptopId>
+
+
+        <tanggalMasuk>2026-11-20</tanggalMasuk>
+
+
+        <status>in progress</status>
+
+
+        <biaya>380000.0</biaya>
+
+
+        <keterangan>Proses instal ulang sistem operasi</keterangan>
+
+
+    </service>
+
+
+    <service>
+
+
+        <id>90</id>
+
+
+        <laptopId>28</laptopId>
+
+
+        <tanggalMasuk>2026-11-24</tanggalMasuk>
+
+
+        <status>completed</status>
+
+
+        <biaya>635000.0</biaya>
+
+
+        <keterangan>Upgrade komponen atas permintaan customer</keterangan>
+
+
+    </service>
+
+
+    <service>
+
+
+        <id>91</id>
+
+
+        <laptopId>18</laptopId>
+
+
+        <tanggalMasuk>2026-11-27</tanggalMasuk>
+
+
+        <status>in progress</status>
+
+
+        <biaya>335000.0</biaya>
+
+
+        <keterangan>Upgrade komponen atas permintaan customer</keterangan>
+
+
+    </service>
+
+
+    <service>
+
+
+        <id>92</id>
+
+
+        <laptopId>17</laptopId>
+
+
+        <tanggalMasuk>2026-12-01</tanggalMasuk>
+
+
+        <status>waiting</status>
+
+
+        <biaya>765000.0</biaya>
+
+
+        <keterangan>Garansi servis 30 hari</keterangan>
+
+
+    </service>
+
+
+    <service>
+
+
+        <id>93</id>
+
+
+        <laptopId>12</laptopId>
+
+
+        <tanggalMasuk>2026-12-05</tanggalMasuk>
+
+
+        <status>completed</status>
+
+
+        <biaya>545000.0</biaya>
+
+
+        <keterangan>Garansi servis 30 hari</keterangan>
+
+
+    </service>
+
+
+    <service>
+
+
+        <id>94</id>
+
+
+        <laptopId>86</laptopId>
+
+
+        <tanggalMasuk>2026-12-08</tanggalMasuk>
+
+
+        <status>waiting</status>
+
+
+        <biaya>815000.0</biaya>
+
+
+        <keterangan>Garansi servis 30 hari</keterangan>
+
+
+    </service>
+
+
+    <service>
+
+
+        <id>95</id>
+
+
+        <laptopId>2</laptopId>
+
+
+        <tanggalMasuk>2026-12-12</tanggalMasuk>
+
+
+        <status>waiting</status>
+
+
+        <biaya>555000.0</biaya>
+
+
+        <keterangan>Testing setelah perbaikan</keterangan>
+
+
+    </service>
+
+
+    <service>
+
+
+        <id>96</id>
+
+
+        <laptopId>30</laptopId>
+
+
+        <tanggalMasuk>2026-12-16</tanggalMasuk>
+
+
+        <status>completed</status>
+
+
+        <biaya>900000.0</biaya>
+
+
+        <keterangan>Proses instal ulang sistem operasi</keterangan>
+
+
+    </service>
+
+
+    <service>
+
+
+        <id>97</id>
+
+
+        <laptopId>4</laptopId>
+
+
+        <tanggalMasuk>2026-12-19</tanggalMasuk>
+
+
+        <status>waiting</status>
+
+
+        <biaya>1395000.0</biaya>
+
+
+        <keterangan>Penggantian komponen sedang berlangsung</keterangan>
+
+
+    </service>
+
+
+    <service>
+
+
+        <id>98</id>
+
+
+        <laptopId>43</laptopId>
+
+
+        <tanggalMasuk>2026-12-23</tanggalMasuk>
+
+
+        <status>in progress</status>
+
+
+        <biaya>880000.0</biaya>
+
+
+        <keterangan>Diagnosa awal selesai, lanjut perbaikan</keterangan>
+
+
+    </service>
+
+
+    <service>
+
+
+        <id>99</id>
+
+
+        <laptopId>25</laptopId>
+
+
+        <tanggalMasuk>2026-12-27</tanggalMasuk>
+
+
+        <status>waiting</status>
+
+
+        <biaya>505000.0</biaya>
+
+
+        <keterangan>Testing setelah perbaikan</keterangan>
+
+
+    </service>
+
+
+    <service>
+
+
+        <id>100</id>
+
+
+        <laptopId>64</laptopId>
+
+
+        <tanggalMasuk>2026-12-31</tanggalMasuk>
+
+
+        <status>waiting</status>
+
+
+        <biaya>930000.0</biaya>
+
+
+        <keterangan>Upgrade komponen atas permintaan customer</keterangan>
+
+
+    </service>
+
+
+    <service>
+
+
+        <id>102</id>
+
+
+        <laptopId>102</laptopId>
+
+
+        <tanggalMasuk>2026-07-12</tanggalMasuk>
+
+
+        <status>in progress</status>
+
+
+        <biaya>3000000.0</biaya>
+
+
+        <keterangan>meletup dia bang</keterangan>
+
+
+    </service>
+
+
+    <service>
+
+
+        <id>103</id>
+
+
+        <laptopId>103</laptopId>
+
+
+        <tanggalMasuk>2026-12-31</tanggalMasuk>
+
+
+        <status>completed</status>
+
+
+        <biaya>1500000.0</biaya>
+
+
+        <keterangan>matot</keterangan>
+
+
+    </service>
+
+
+</services>

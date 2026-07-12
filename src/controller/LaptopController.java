@@ -2,12 +2,18 @@ package controller;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.event.ActionEvent;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.FXML;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.*;
+import javafx.stage.Stage;
 import model.Laptop;
 import Service.LaptopService;
 
-public class LaptopController {
+public class LaptopController implements SearchableController {
 
     @FXML
     private TextField txtId;
@@ -26,6 +32,9 @@ public class LaptopController {
 
     @FXML
     private TextArea txtKeluhan;
+
+    @FXML
+    private Label lblTotalLaptop;
 
     @FXML
     private TableView<Laptop> laptopTable;
@@ -50,6 +59,7 @@ public class LaptopController {
 
     private final LaptopService laptopService = new LaptopService();
     private final ObservableList<Laptop> laptopList = FXCollections.observableArrayList();
+    private String searchKeyword = "";
 
     @FXML
     public void initialize() {
@@ -71,12 +81,43 @@ public class LaptopController {
                 new javafx.beans.property.SimpleStringProperty(cellData.getValue().getSerialNumber()));
         colKeluhan.setCellValueFactory(cellData ->
                 new javafx.beans.property.SimpleStringProperty(cellData.getValue().getKeluhan()));
+        laptopTable.setColumnResizePolicy(TableView.CONSTRAINED_RESIZE_POLICY);
     }
 
     private void loadLaptopData() {
         laptopList.clear();
-        laptopList.addAll(laptopService.getAllLaptops());
+        for (Laptop laptop : laptopService.getAllLaptops()) {
+            if (matchesSearch(laptop)) {
+                laptopList.add(laptop);
+            }
+        }
         laptopTable.setItems(laptopList);
+        if (lblTotalLaptop != null) {
+            lblTotalLaptop.setText(String.valueOf(laptopService.getAllLaptops().size()));
+        }
+    }
+
+    @Override
+    public void setSearchKeyword(String keyword) {
+        searchKeyword = keyword != null ? keyword.trim().toLowerCase() : "";
+        loadLaptopData();
+    }
+
+    private boolean matchesSearch(Laptop laptop) {
+        if (searchKeyword.isEmpty()) {
+            return true;
+        }
+
+        return contains(laptop.getId())
+                || contains(laptop.getCustomerId())
+                || contains(laptop.getMerk())
+                || contains(laptop.getTipe())
+                || contains(laptop.getSerialNumber())
+                || contains(laptop.getKeluhan());
+    }
+
+    private boolean contains(String value) {
+        return value != null && value.toLowerCase().contains(searchKeyword);
     }
 
     private void setupTableSelection() {
@@ -97,7 +138,6 @@ public class LaptopController {
         Laptop laptop = getLaptopFromForm();
 
         if (laptop == null) {
-            showAlert(Alert.AlertType.WARNING, "Validasi", "Semua field harus diisi.");
             return;
         }
 
@@ -117,7 +157,6 @@ public class LaptopController {
         Laptop laptop = getLaptopFromForm();
 
         if (laptop == null) {
-            showAlert(Alert.AlertType.WARNING, "Validasi", "Semua field harus diisi.");
             return;
         }
 
@@ -175,10 +214,25 @@ public class LaptopController {
 
         if (id.isEmpty() || customerId.isEmpty() || merk.isEmpty() || tipe.isEmpty()
                 || serialNumber.isEmpty() || keluhan.isEmpty()) {
+            showAlert(Alert.AlertType.WARNING, "Validasi", "Semua field harus diisi.");
+            return null;
+        }
+
+        if (!isNumeric(id)) {
+            showAlert(Alert.AlertType.ERROR, "Validasi ID", "ID Laptop harus berupa angka.");
+            return null;
+        }
+
+        if (!isNumeric(customerId)) {
+            showAlert(Alert.AlertType.ERROR, "Validasi ID", "ID Customer harus berupa angka.");
             return null;
         }
 
         return new Laptop(id, customerId, merk, tipe, serialNumber, keluhan);
+    }
+
+    private boolean isNumeric(String value) {
+        return value != null && value.trim().matches("\\d+");
     }
 
     private void clearForm() {
@@ -196,6 +250,23 @@ public class LaptopController {
         alert.setHeaderText(null);
         alert.setContentText(message);
         alert.showAndWait();
+    }
+
+    @FXML
+    private void backToDashboard(ActionEvent event) {
+        openPage(event, "/view/Dashboard.fxml");
+    }
+
+    private void openPage(ActionEvent event, String fxmlPath) {
+        try {
+            Parent root = FXMLLoader.load(getClass().getResource(fxmlPath));
+            Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            stage.setScene(new Scene(root, 1400, 800));
+            stage.setMaximized(true);
+            stage.show();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 }
 
